@@ -1,3 +1,5 @@
+package Entrenador;
+
 public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
