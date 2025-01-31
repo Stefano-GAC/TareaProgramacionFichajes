@@ -1,3 +1,8 @@
-public class Traspaso {
-
+public enum Traspaso {
+    SINSOLICITAR,
+    SOLICITADO,
+    APROBADOENTRENADOR,
+    APROBADOPRESIDENTE,
+    RECHAZADOENTRENADOR,
+    RECHAZADOPRESIDENTE;
 }
