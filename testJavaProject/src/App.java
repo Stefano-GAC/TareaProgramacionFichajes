@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 
+import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;
 
@@ -29,5 +30,18 @@ public class App {
         Traspaso traspasoAprobadoPresidente = Traspaso.APROBADOPRESIDENTE;
         Traspaso traspasoRechazadoEntrenador = Traspaso.RECHAZADOENTRENADOR;
         Traspaso traspasoRechazadoPresidente = Traspaso.RECHAZADOPRESIDENTE;
+
+         /** Creacion de objetos de la clase Jugador  */
+        Jugador jugador1 = new Jugador("Luis Suárez", new Date(1987, 1, 24), "Uruguay", posicionDelantero, 9, traspasoAprobadoPresidente);
+        Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", posicionDefensa, 3, traspasoSolicitado);
+        Jugador jugador3 = new Jugador("Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", posicionPortero, 1, traspasoRechazadoEntrenador);
+        Jugador jugador4 = new Jugador("Leonel Messi", new Date (1984, 5, 26),"Argentina" , posicionMedioCampista, 10, traspasoAprobadoPresidente);
+        Jugador jugador5 = new Jugador("Stefano Alderete", new Date(2000, 8, 21), "Peru", posicionAguatero, 0, traspasoRechazadoPresidente);
+        Jugador jugador6 = new Jugador("Vini Jr", new Date(2000,6,21), "Brasil", posicionDelantero, 9, traspasoSolicitado)
+        Jugador jugador7 = new Jugador("Van Dijk", new Date(1998, 6,11), "Paises Bajos", posicionDefensa, 6666, traspasoSinSolicitar)
+        Jugador jugador8 = new Jugador("Lamine Yamal", new Date(2006, 9,25), "España", posicionDelantero, 11, traspasoAprobadoEntrenador)
+        Jugador jugador9 = new Jugador("Andres Iniesta", new Date(1889, 7, 1), "España", posicionMedioCampista, 8, traspasoRechazadoPresidente)
+        Jugador jugador10 = new Jugador("Oblak", new Date(1990, 12,30), "Eslovenia", posicionPortero, 4, traspasoSinSolicitar)
+
     }
 }
