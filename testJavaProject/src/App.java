@@ -43,5 +43,17 @@ public class App {
         Jugador jugador9 = new Jugador("Andres Iniesta", new Date(1889, 7, 1), "España", posicionMedioCampista, 8, traspasoRechazadoPresidente)
         Jugador jugador10 = new Jugador("Oblak", new Date(1990, 12,30), "Eslovenia", posicionPortero, 4, traspasoSinSolicitar)
 
+        /**Creacion de la lista jugadores */
+        ArrayList<Jugador> jugadores = new ArrayList<>();
+        jugadores.add(jugador1);
+        jugadores.add(jugador2);
+        jugadores.add(jugador3);
+        jugadores.add(jugador4);
+        jugadores.add(jugador5);
+        jugadores.add(jugador6);
+        jugadores.add(jugador7);
+        jugadores.add(jugador8);
+        jugadores.add(jugador9);
+        jugadores.add(jugador10);
     }
 }
