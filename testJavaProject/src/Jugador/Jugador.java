@@ -68,4 +68,11 @@ public class Jugador {
         this.Traspaso_jugador = Traspaso_jugador;
     }
 
+    @Override
+    public String toString() {
+        return "Jugador [Nombre_camiseta=" + Nombre_camiseta + ", Fecha_nacimiento=" + Fecha_nacimiento
+                + ", Pais_origen=" + Pais_origen + ", Posicion_jugador=" + Posicion_jugador + ", Dorsal=" + Dorsal
+                + ", Traspaso_jugador=" + Traspaso_jugador + "]";
+    }
+
 }

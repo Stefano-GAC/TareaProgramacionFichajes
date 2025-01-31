@@ -66,7 +66,8 @@ public class App {
         jugadores.add(jugador8);
         jugadores.add(jugador9);
         jugadores.add(jugador10);
+
         System.out.println("hola");
-        System.out.println(jugador1.getNombre_camiseta());
+        System.out.println(jugador1);
     }
 }
