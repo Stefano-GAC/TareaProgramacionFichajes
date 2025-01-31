@@ -1,11 +1,27 @@
 
 public class Presidente {
-    public String Dni;
-    public String Casa;
+    private String Dni;
+    private String Nombre;
 
-    public Presidente(String Dni, String Casa) {
+    public Presidente(String Dni, String Nombre) {
         this.Dni = Dni;
-        this.Casa = Casa;
+        this.Nombre = Nombre;
+    }
+
+    public String getDni() {
+        return Dni;
+    }
+
+    public void setDni(String Dni) {
+        this.Dni = Dni;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
     }
 
 }
