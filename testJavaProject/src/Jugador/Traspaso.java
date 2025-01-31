@@ -1,3 +1,5 @@
+package Jugador;
+
 public enum Traspaso {
     SINSOLICITAR,
     SOLICITADO,

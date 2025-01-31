@@ -1,3 +1,5 @@
+package Jugador;
+
 import java.sql.Date;
 
 public class Jugador {
