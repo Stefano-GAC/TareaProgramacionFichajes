@@ -1,10 +1,13 @@
 public class Equipo {
-    public String nombreEquipo;
-    public String abrevEquipo;
+    private String nombreEquipo;
+    private String abrevEquipo;
 
-    public Equipo(String nombreEquipo, String abrevEquipo) {
+    private Presidente Presidente_id;
+
+    public Equipo(String nombreEquipo, String abrevEquipo, Presidente Presidente_id) {
         this.nombreEquipo = nombreEquipo;
         this.abrevEquipo = abrevEquipo;
+        this.Presidente_id = Presidente_id;
     }
 
     public String getNombreEquipo() {
