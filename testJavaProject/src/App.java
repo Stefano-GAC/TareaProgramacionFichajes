@@ -76,10 +76,22 @@ public class App {
                 Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141);
                 Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433);
 
+                /** Creacion de la lista de Entrenador */
+                ArrayList<Entrenador> entrenadores = new ArrayList<>();
+                entrenadores.add(entrenador1);
+                entrenadores.add(entrenador2);
+                entrenadores.add(entrenador3);
+
                 /** Creacion de objetos de la clase Equipo */
                 Equipo equipo1 = new Equipo("Barcelona", "FCB");
                 Equipo equipo2 = new Equipo("Real Madrid", "RMD");
                 Equipo equipo3 = new Equipo("Atletico de Madrid", "ATM");
+
+                /** Creacion de la lista de Equipo */
+                ArrayList<Equipo> equipos = new ArrayList<>();
+                equipos.add(equipo1);
+                equipos.add(equipo2);
+                equipos.add(equipo3);
 
                 // ArrayList<Jugador> Barcelona = new ArrayList<Jugador>();
                 // Barcelona.add(jugador1);
