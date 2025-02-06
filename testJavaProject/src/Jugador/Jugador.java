@@ -53,6 +53,9 @@ public class Jugador {
     }
 
     public int getDorsal() {
+        if (Dorsal < 0) {
+            System.out.println("El dorsal es incorrecto");
+        }
         return Dorsal;
     }
 
@@ -70,9 +73,9 @@ public class Jugador {
 
     @Override
     public String toString() {
-        return "Jugador [Nombre_camiseta=" + Nombre_camiseta + ", Fecha_nacimiento=" + Fecha_nacimiento
-                + ", Pais_origen=" + Pais_origen + ", Posicion_jugador=" + Posicion_jugador + ", Dorsal=" + Dorsal
-                + ", Traspaso_jugador=" + Traspaso_jugador + "]";
+        return "Jugador [Nombre_camiseta= " + Nombre_camiseta + ", Fecha_nacimiento= " + Fecha_nacimiento
+                + ", Pais_origen= " + Pais_origen + ", Posicion_jugador= " + Posicion_jugador + ", Dorsal= " + Dorsal
+                + ", Traspaso_jugador= " + Traspaso_jugador + "]";
     }
 
 }

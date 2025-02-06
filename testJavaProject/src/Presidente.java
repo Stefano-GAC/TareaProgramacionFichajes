@@ -24,4 +24,8 @@ public class Presidente {
         this.Nombre = Nombre;
     }
 
+    @Override
+    public String toString() {
+        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "]";
+    }
 }
