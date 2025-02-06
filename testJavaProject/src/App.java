@@ -76,6 +76,11 @@ public class App {
                 Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141);
                 Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433);
 
+                /** Creacion de objetos de la clase Equipo */
+                Equipo equipo1 = new Equipo("Barcelona", "FCB");
+                Equipo equipo2 = new Equipo("Real Madrid", "RMD");
+                Equipo equipo3 = new Equipo("Atletico de Madrid", "ATM");
+
                 // ArrayList<Jugador> Barcelona = new ArrayList<Jugador>();
                 // Barcelona.add(jugador1);
                 // Barcelona.add(jugador2);
