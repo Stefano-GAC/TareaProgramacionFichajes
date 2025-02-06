@@ -4,8 +4,6 @@ public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
 
-    private Stefano;
-
     public Entrenador(String nombreEntrenador, Formacion formacionPreferida) {
         this.nombreEntrenador = nombreEntrenador;
         this.formacionPreferida = formacionPreferida;
@@ -31,5 +29,4 @@ public class Entrenador {
     public String toString() {
         return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "]";
     }
-
 }

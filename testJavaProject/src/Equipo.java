@@ -8,6 +8,9 @@ public class Equipo {
     }
 
     public String getNombreEquipo() {
+        if (nombreEquipo == null) {
+            System.out.println("Ingrese un nombre valido");
+        }
         return nombreEquipo;
     }
 
