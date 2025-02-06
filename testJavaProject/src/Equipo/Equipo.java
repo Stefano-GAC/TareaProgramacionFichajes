@@ -1,3 +1,5 @@
+package Equipo;
+
 public class Equipo {
     private String nombreEquipo;
     private String abrevEquipo;
@@ -8,9 +10,6 @@ public class Equipo {
     }
 
     public String getNombreEquipo() {
-        if (nombreEquipo == null) {
-            System.out.println("Ingrese un nombre valido");
-        }
         return nombreEquipo;
     }
 

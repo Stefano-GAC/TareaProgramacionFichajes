@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 import Entrenador.Entrenador;
 import Entrenador.Formacion;
+import Equipo.Equipo;
 import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;

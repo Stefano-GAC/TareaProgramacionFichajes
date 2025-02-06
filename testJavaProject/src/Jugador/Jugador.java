@@ -1,5 +1,6 @@
 package Jugador;
 
+import Equipo.Equipo; // Importamos la clase desde el paquete "Equipo"
 import java.sql.Date;
 
 public class Jugador {
@@ -9,9 +10,10 @@ public class Jugador {
     private Posicion Posicion_jugador;
     private int Dorsal;
     private Traspaso Traspaso_jugador;
+    private Equipo IdEquipo;
 
     public Jugador(String Nombre_camiseta, Date Fecha_nacimiento, String Pais_origen, Posicion Posicion_jugador,
-            int Dorsal, Traspaso Traspaso_jugador) {
+            int Dorsal, Traspaso Traspaso_jugador, Equipo IdEquipo) {
         this.Nombre_camiseta = Nombre_camiseta;
         this.Fecha_nacimiento = Fecha_nacimiento;
         this.Pais_origen = Pais_origen;
@@ -21,6 +23,9 @@ public class Jugador {
     }
 
     public String getNombre_camiseta() {
+        if (Nombre_camiseta == null) {
+            System.out.println("El nombre ingresado no es valido");
+        }
         return Nombre_camiseta;
     }
 
