@@ -24,4 +24,9 @@ public class Entrenador {
     public void setFormacionPreferida(Formacion formacionPreferida) {
         this.formacionPreferida = formacionPreferida;
     }
+
+    @Override
+    public String toString() {
+        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "]";
+    }
 }

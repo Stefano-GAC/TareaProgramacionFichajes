@@ -22,4 +22,9 @@ public class Equipo {
     public void setAbrevEquipo(String abrevEquipo) {
         this.abrevEquipo = abrevEquipo;
     }
+
+    @Override
+    public String toString() {
+        return "Equipo [Nombre= " + nombreEquipo + "Abraviatura= " + abrevEquipo + "]";
+    }
 }
