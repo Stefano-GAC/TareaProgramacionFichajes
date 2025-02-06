@@ -85,8 +85,7 @@ public class App {
                 LosGallitosCuliacan.add(jugador10);
 
                 System.out.println("hola");
-                System.out.println(jugador2.toString());
-                System.out.println(jugador10.toString());
+                System.out.println(jugador2.getDorsal());
                 System.out.println(presidente1);
 
         }

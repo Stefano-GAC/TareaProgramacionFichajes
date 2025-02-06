@@ -9,7 +9,6 @@ public class Jugador {
     private Posicion Posicion_jugador;
     private int Dorsal;
     private Traspaso Traspaso_jugador;
-    public int num;
 
     public Jugador(String Nombre_camiseta, Date Fecha_nacimiento, String Pais_origen, Posicion Posicion_jugador,
             int Dorsal, Traspaso Traspaso_jugador) {
