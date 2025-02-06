@@ -1,5 +1,8 @@
 import java.sql.Date;
 import java.util.ArrayList;
+
+import Entrenador.Entrenador;
+import Entrenador.Formacion;
 import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;
@@ -68,21 +71,26 @@ public class App {
                 jugadores.add(jugador9);
                 jugadores.add(jugador10);
 
-                ArrayList<Jugador> Barcelona = new ArrayList<Jugador>();
-                Barcelona.add(jugador1);
-                Barcelona.add(jugador2);
-                Barcelona.add(jugador8);
+                /** Creacion de objetos de la clase Entrenador */
+                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Formacion.Formacion343);
+                Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141);
+                Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433);
 
-                ArrayList<Jugador> RealMadrid = new ArrayList<Jugador>();
-                RealMadrid.add(jugador3);
-                RealMadrid.add(jugador6);
-                RealMadrid.add(jugador7);
+                // ArrayList<Jugador> Barcelona = new ArrayList<Jugador>();
+                // Barcelona.add(jugador1);
+                // Barcelona.add(jugador2);
+                // Barcelona.add(jugador8);
 
-                ArrayList<Jugador> LosGallitosCuliacan = new ArrayList<Jugador>();
-                LosGallitosCuliacan.add(jugador4);
-                LosGallitosCuliacan.add(jugador5);
-                LosGallitosCuliacan.add(jugador9);
-                LosGallitosCuliacan.add(jugador10);
+                // ArrayList<Jugador> RealMadrid = new ArrayList<Jugador>();
+                // RealMadrid.add(jugador3);
+                // RealMadrid.add(jugador6);
+                // RealMadrid.add(jugador7);
+
+                // ArrayList<Jugador> LosGallitosCuliacan = new ArrayList<Jugador>();
+                // LosGallitosCuliacan.add(jugador4);
+                // LosGallitosCuliacan.add(jugador5);
+                // LosGallitosCuliacan.add(jugador9);
+                // LosGallitosCuliacan.add(jugador10);
 
                 System.out.println("hola");
                 System.out.println(jugador1);
