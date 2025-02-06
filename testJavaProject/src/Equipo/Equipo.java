@@ -1,6 +1,8 @@
+package Equipo;
+
 public class Equipo {
-    public String nombreEquipo;
-    public String abrevEquipo;
+    private String nombreEquipo;
+    private String abrevEquipo;
 
     public Equipo(String nombreEquipo, String abrevEquipo) {
         this.nombreEquipo = nombreEquipo;
@@ -8,9 +10,6 @@ public class Equipo {
     }
 
     public String getNombreEquipo() {
-        if (nombreEquipo == null) {
-            System.out.println("Ingrese un nombre valido");
-        }
         return nombreEquipo;
     }
 

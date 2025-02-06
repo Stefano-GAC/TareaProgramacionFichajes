@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 import Entrenador.Entrenador;
 import Entrenador.Formacion;
+import Equipo.Equipo;
 import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;
@@ -37,7 +38,7 @@ public class App {
                 /** Creacion de objetos de la clase Jugador */
                 Jugador jugador1 = new Jugador("Luis Suárez", new Date(1987, 1, 24), "Uruguay", posicionDelantero, 9,
                                 traspasoAprobadoPresidente);
-                Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", posicionDefensa, 3,
+                Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", posicionDefensa, -8,
                                 traspasoSolicitado);
                 Jugador jugador3 = new Jugador("Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", posicionPortero, 1,
                                 traspasoRechazadoEntrenador);
@@ -110,8 +111,7 @@ public class App {
                 // LosGallitosCuliacan.add(jugador10);
 
                 System.out.println("hola");
-                System.out.println(jugador1);
-                System.out.println(jugador10.toString());
+                System.out.println(jugador2.getDorsal());
                 System.out.println(presidente1);
 
         }
