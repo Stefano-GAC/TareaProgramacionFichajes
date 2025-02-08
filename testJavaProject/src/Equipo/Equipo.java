@@ -1,19 +1,12 @@
 package Equipo;
 
-import Entrenador.Entrenador;
-import Presidente.Presidente;
-
 public class Equipo {
     private String nombreEquipo;
     private String abrevEquipo;
 
-    private Entrenador nombreEntrenador;
-    private Presidente nombrePresidente;
-
-    public Equipo(String nombreEquipo, String abrevEquipo, Entrenador nombreEntrenador, Presidente nombrePresidente) {
+    public Equipo(String nombreEquipo, String abrevEquipo) {
         this.nombreEquipo = nombreEquipo;
         this.abrevEquipo = abrevEquipo;
-        this.nombreEntrenador = nombreEntrenador;
     }
 
     public String getNombreEquipo() {

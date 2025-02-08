@@ -1,11 +1,15 @@
+import Equipo.Equipo;
 
 public class Presidente {
     private String Dni;
     private String Nombre;
 
-    public Presidente(String Dni, String Nombre) {
+    private Equipo nombreEquipo;
+
+    public Presidente(String Dni, String Nombre, Equipo nombrEquipo) {
         this.Dni = Dni;
         this.Nombre = Nombre;
+        this.nombreEquipo = nombreEquipo;
     }
 
     public String getDni() {
