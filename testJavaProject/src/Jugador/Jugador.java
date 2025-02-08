@@ -21,7 +21,7 @@ public class Jugador {
         this.Posicion_jugador = Posicion_jugador;
         this.Dorsal = Dorsal;
         this.Traspaso_jugador = Traspaso_jugador;
-        this.nombreEquipo = nombreEquipo;
+        this.nombreEquipo = null;
     }
 
     public String getNombre_camiseta() {

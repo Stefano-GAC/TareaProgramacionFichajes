@@ -1,3 +1,5 @@
+package Presidente;
+
 import Equipo.Equipo;
 
 public class Presidente {
