@@ -57,10 +57,11 @@ public class Entrenador {
         this.formacionPreferida = formacionPreferida;
     }
 
-    public void entrenadorDecision(Jugador jugador){
+    public void entrenadorDecision(Jugador jugador) {
         if (jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
             if (Jugador.getnombreEquipo == this.nombreEquipo) {
-                jugador.setTraspaso_jugador(Traspaso.APROBADOENTRENADOR); 
+                jugador.setTraspaso_jugador(Traspaso.APROBADOENTRENADOR);
+                System.out.println("El nuevo estado del traspaso es: " + Traspaso_jugador);
             } else {
                 if (Jugador.getnombreEquipo != this.nombreEquipo) {
                     jugador.setTraspaso_jugador(Traspaso.RECHAZADOENTRENADOR);

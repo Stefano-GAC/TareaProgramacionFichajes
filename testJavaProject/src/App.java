@@ -104,5 +104,15 @@ public class App {
 
                 System.out.println("El entrenador del Atlético de Madrid es:" + entrenador3);
 
+                System.out.println("-------------------------");
+                System.out.println("Primera solicitud de traspaso");
+
+                /**
+                 * Metodos para realizar el Traspaso
+                 */
+                jugador1.jugadorTraspaso();
+                entrenador1.entrenadorDecision(jugador1);
+                presidente1.presidenteDecision(jugador1);
+
         }
 }

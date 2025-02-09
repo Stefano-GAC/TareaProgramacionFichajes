@@ -169,9 +169,11 @@ public class Jugador {
      * Y si es igual muestra que ya lo ha solicitado
      */
     public void jugadorTraspaso() {
+        System.out.println("El estado actual del traspaso es: " + Traspaso_jugador);
         if (Traspaso_jugador == Traspaso.SINSOLICITAR) {
             Traspaso_jugador = Traspaso.SOLICITADO;
             System.out.println("El jugador " + Nombre_camiseta + "solicita un traspaso.");
+            System.out.println("El nuevo estado del traspaso es: " + Traspaso_jugador);
         } else {
             System.out.println("Este jugador ya solicitó un traspaso");
         }

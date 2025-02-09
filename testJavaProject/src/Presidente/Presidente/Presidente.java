@@ -70,20 +70,20 @@ public class Presidente {
      * @param nombreEquipo
      */
     public void setNombreEquipo(Equipo nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;s
+        this.nombreEquipo = nombreEquipo;
     }
-    
-    public void presidenteDecision(Jugador jugador){
+
+    public void presidenteDecision(Jugador jugador) {
         if (Jugador.getTraspaso_jugador == Traspaso.APROBADOENTRENADOR) {
             if (Jugador.getnombreEquipo == this.nombreEquipo) {
-            jugador.setTraspaso_jugador(Traspaso.APROBADOPRESIDENTE);
-        } else {
-            if (Jugador.getnombreEquipo != this.nombreEquipo) {
-                jugador.setTraspaso_jugador(Traspaso.RECHAZADOPRESIDENTE);
+                jugador.setTraspaso_jugador(Traspaso.APROBADOPRESIDENTE);
+            } else {
+                if (Jugador.getnombreEquipo != this.nombreEquipo) {
+                    jugador.setTraspaso_jugador(Traspaso.RECHAZADOPRESIDENTE);
+                }
             }
         }
-        }
-        
+
     }
 
     /**
