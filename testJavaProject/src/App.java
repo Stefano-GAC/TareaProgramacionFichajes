@@ -79,6 +79,9 @@ public class App {
                 jugadores3.add(jugador8);
                 jugadores3.add(jugador9);
 
+                /**
+                 * Se asignan las listas d los jugadores a los equipos
+                 */
                 equipo1.setListaJugadores(jugadores1);
                 equipo2.setListaJugadores(jugadores2);
                 equipo3.setListaJugadores(jugadores3);
