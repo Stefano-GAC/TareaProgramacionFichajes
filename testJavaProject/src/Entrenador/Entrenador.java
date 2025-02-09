@@ -1,12 +1,17 @@
 package Entrenador;
 
+import Equipo.Equipo;
+
 public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
 
-    public Entrenador(String nombreEntrenador, Formacion formacionPreferida) {
+    private Equipo nombreEquipo;
+
+    public Entrenador(String nombreEntrenador, Formacion formacionPreferida, Equipo nombreEquipo) {
         this.nombreEntrenador = nombreEntrenador;
         this.formacionPreferida = formacionPreferida;
+        this.nombreEquipo = nombreEquipo;
     }
 
     public String getNombreEntrenador() {
@@ -27,6 +32,7 @@ public class Entrenador {
 
     @Override
     public String toString() {
-        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "]";
+        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "Equipo = "
+                + nombreEquipo + "]";
     }
 }
