@@ -33,7 +33,7 @@ public class Entrenador {
 
     public void entrenadorDecision(Jugador Nombre_camiseta){
         if (Jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
-            if (Jugador.getnombreEquipo != Equipo.getnombreEquipo) {
+            if (Jugador.getnombreEquipo == this.nombreEquipo) {
                 
             }
         }
