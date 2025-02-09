@@ -11,17 +11,14 @@ public class Jugador {
     private int Dorsal;
     private Traspaso Traspaso_jugador;
 
-    private Equipo nombreEquipo;
-
     public Jugador(String Nombre_camiseta, Date Fecha_nacimiento, String Pais_origen, Posicion Posicion_jugador,
-            int Dorsal, Traspaso Traspaso_jugador, Equipo nombreEquipo) {
+            int Dorsal, Traspaso Traspaso_jugador) {
         this.Nombre_camiseta = Nombre_camiseta;
         this.Fecha_nacimiento = Fecha_nacimiento;
         this.Pais_origen = Pais_origen;
         this.Posicion_jugador = Posicion_jugador;
         this.Dorsal = Dorsal;
-        this.Traspaso_jugador = Traspaso_jugador;
-        this.nombreEquipo = null;
+        this.Traspaso_jugador = null;
     }
 
     public String getNombre_camiseta() {
