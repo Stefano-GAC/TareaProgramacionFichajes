@@ -1,6 +1,5 @@
 package Jugador;
 
-import Equipo.Equipo;
 import java.sql.Date;
 
 public class Jugador {

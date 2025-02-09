@@ -2,9 +2,7 @@ package Equipo;
 
 import java.util.ArrayList;
 
-import Entrenador.Entrenador;
 import Jugador.Jugador;
-import Presidente.Presidente;
 
 public class Equipo {
 

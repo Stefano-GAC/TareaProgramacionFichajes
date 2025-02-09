@@ -79,9 +79,23 @@ public class App {
 
                 equipo1.setListaJugadores(jugadores1);
                 equipo2.setListaJugadores(jugadores2);
-                equipo1.setListaJugadores(jugadores3);
+                equipo3.setListaJugadores(jugadores3);
 
-                System.out.println(equipo1);
+                /** Prueba de los toString */
+                System.out.println("Los Jugadores del Barcelona son:");
+                int contador = 1;
+                for (Jugador jugador : jugadores1) {
+                        System.out.println(contador + ". " + jugador);
+                        contador++;
+                }
+
+                System.out.println("----------------------------");
+
+                System.out.println("El presidente del Real Madrid es:" + presidente2);
+
+                System.out.println("----------------------------");
+
+                System.out.println("El entrenador del Atlético de Madrid es:" + entrenador3);
 
         }
 }

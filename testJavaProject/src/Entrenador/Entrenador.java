@@ -32,6 +32,7 @@ public class Entrenador {
 
     @Override
     public String toString() {
-        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "]";
+        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "Equipo = "
+                + nombreEquipo + "]";
     }
 }
