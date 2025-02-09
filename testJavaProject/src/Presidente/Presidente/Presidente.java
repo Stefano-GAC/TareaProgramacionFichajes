@@ -1,6 +1,8 @@
 package Presidente;
 
 import Equipo.Equipo;
+import Jugador.Traspaso;
+import Jugador.Jugador;
 
 public class Presidente {
     private String Dni;
@@ -35,7 +37,20 @@ public class Presidente {
     }
 
     public void setNombreEquipo(Equipo nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;
+        this.nombreEquipo = nombreEquipo;s
+    }
+    
+    public void presidenteDecision(Jugador jugador){
+        if (Jugador.getTraspaso_jugador == Traspaso.APROBADOENTRENADOR) {
+            if (Jugador.getnombreEquipo == this.nombreEquipo) {
+            jugador.setTraspaso_jugador(Traspaso.APROBADOPRESIDENTE);
+        } else {
+            if (Jugador.getnombreEquipo != this.nombreEquipo) {
+                jugador.setTraspaso_jugador(Traspaso.RECHAZADOPRESIDENTE);
+            }
+        }
+        }
+        
     }
 
     @Override

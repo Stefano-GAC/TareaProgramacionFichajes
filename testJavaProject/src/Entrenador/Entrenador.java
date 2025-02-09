@@ -31,10 +31,14 @@ public class Entrenador {
         this.formacionPreferida = formacionPreferida;
     }
 
-    public void entrenadorDecision(Jugador Nombre_camiseta){
-        if (Jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
+    public void entrenadorDecision(Jugador jugador){
+        if (jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
             if (Jugador.getnombreEquipo == this.nombreEquipo) {
-                
+                jugador.setTraspaso_jugador(Traspaso.APROBADOENTRENADOR); 
+            } else {
+                if (Jugador.getnombreEquipo != this.nombreEquipo) {
+                    jugador.setTraspaso_jugador(Traspaso.RECHAZADOENTRENADOR);
+                }
             }
         }
     }
