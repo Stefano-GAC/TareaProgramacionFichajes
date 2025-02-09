@@ -17,7 +17,7 @@ public class Jugador {
         this.Pais_origen = Pais_origen;
         this.Posicion_jugador = Posicion_jugador;
         this.Dorsal = Dorsal;
-        this.Traspaso_jugador = null;
+        this.Traspaso_jugador = Traspaso.SINSOLICITAR;
     }
 
     public String getNombre_camiseta() {
@@ -72,6 +72,16 @@ public class Jugador {
 
     public void setTraspaso_jugador(Traspaso Traspaso_jugador) {
         this.Traspaso_jugador = Traspaso_jugador;
+    }
+
+    public void jugadorTraspaso() {
+        if (Traspaso_jugador == Traspaso.SINSOLICITAR) {
+            Traspaso_jugador = Traspaso.SOLICITADO;
+            System.out.println("El jugador " + Nombre_camiseta + "solicita un traspaso.");
+        } else {
+            System.out.println("Este jugador ya solicitó un traspaso");
+        }
+
     }
 
     @Override
