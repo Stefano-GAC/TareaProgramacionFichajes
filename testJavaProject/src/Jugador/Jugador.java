@@ -2,13 +2,19 @@ package Jugador;
 
 import java.sql.Date;
 
+import Equipo.Equipo;
+import Jugador.Traspaso;;
+
 public class Jugador {
+    public static Traspaso getTraspaso_jugador;
+    public static Equipo getnombreEquipo;
     private String Nombre_camiseta;
     private Date Fecha_nacimiento;
     private String Pais_origen;
     private Posicion Posicion_jugador;
     private int Dorsal;
     private Traspaso Traspaso_jugador;
+    private Equipo nombreEquipo;
 
     public Jugador(String Nombre_camiseta, Date Fecha_nacimiento, String Pais_origen, Posicion Posicion_jugador,
             int Dorsal, Traspaso Traspaso_jugador) {
@@ -72,6 +78,14 @@ public class Jugador {
 
     public void setTraspaso_jugador(Traspaso Traspaso_jugador) {
         this.Traspaso_jugador = Traspaso_jugador;
+    }
+
+    public Equipo getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public void setNombreEquipo(Equipo nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
     }
 
     public void jugadorTraspaso() {

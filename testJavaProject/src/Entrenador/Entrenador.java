@@ -1,11 +1,12 @@
 package Entrenador;
-
+import Jugador.Jugador;
 import Equipo.Equipo;
+import Jugador.Traspaso;
 
 public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
-
+    private Traspaso Traspaso_jugador;
     private Equipo nombreEquipo;
 
     public Entrenador(String nombreEntrenador, Formacion formacionPreferida, Equipo nombreEquipo) {
@@ -28,6 +29,14 @@ public class Entrenador {
 
     public void setFormacionPreferida(Formacion formacionPreferida) {
         this.formacionPreferida = formacionPreferida;
+    }
+
+    public void entrenadorDecision(Jugador Nombre_camiseta){
+        if (Jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
+            if (Jugador.getnombreEquipo == this.nombreEquipo) {
+                
+            }
+        }
     }
 
     @Override
