@@ -57,17 +57,14 @@ public class Entrenador {
         this.formacionPreferida = formacionPreferida;
     }
 
-    /**
-     * 
-     * @param Nombre_camiseta Jugador que solicitará el cambio
-     * 
-     *                        Metodo que verifica el estado actual del traspaso de
-     *                        un jugador y lo compara con el estado "Solicitado",
-     *                        para mantenerlo o igualarlo.
-     */
-    public void entrenadorDecision(Jugador Nombre_camiseta) {
-        if (Jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
+    public void entrenadorDecision(Jugador jugador){
+        if (jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
             if (Jugador.getnombreEquipo == this.nombreEquipo) {
+                jugador.setTraspaso_jugador(Traspaso.APROBADOENTRENADOR); 
+            } else {
+                if (Jugador.getnombreEquipo != this.nombreEquipo) {
+                    jugador.setTraspaso_jugador(Traspaso.RECHAZADOENTRENADOR);
+                }
 
             }
         }
