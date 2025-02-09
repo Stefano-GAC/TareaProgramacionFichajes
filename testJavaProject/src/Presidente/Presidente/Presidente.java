@@ -8,7 +8,7 @@ public class Presidente {
 
     private Equipo nombreEquipo;
 
-    public Presidente(String Dni, String Nombre, Equipo nombrEquipo) {
+    public Presidente(String Dni, String Nombre, Equipo nombreEquipo) {
         this.Dni = Dni;
         this.Nombre = Nombre;
         this.nombreEquipo = nombreEquipo;
@@ -18,20 +18,23 @@ public class Presidente {
         return Dni;
     }
 
-    public void setDni(String Dni) {
-        this.Dni = Dni;
+    public void setDni(String dni) {
+        Dni = dni;
     }
 
     public String getNombre() {
         return Nombre;
     }
 
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setNombre(String nombre) {
+        Nombre = nombre;
     }
 
-    @Override
-    public String toString() {
-        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "]";
+    public Equipo getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public void setNombreEquipo(Equipo nombreEquipo) {
+        this.nombreEquipo = nombreEquipo;
     }
 }
