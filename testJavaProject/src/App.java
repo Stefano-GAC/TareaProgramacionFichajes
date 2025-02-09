@@ -77,9 +77,11 @@ public class App {
                 jugadores3.add(jugador8);
                 jugadores3.add(jugador9);
 
-                System.out.println("hola");
-                System.out.println(jugador2.getDorsal());
-                System.out.println(presidente1);
+                equipo1.setListaJugadores(jugadores1);
+                equipo2.setListaJugadores(jugadores2);
+                equipo1.setListaJugadores(jugadores3);
+
+                System.out.println(equipo1);
 
         }
 }

@@ -37,4 +37,9 @@ public class Presidente {
     public void setNombreEquipo(Equipo nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
+
+    @Override
+    public String toString() {
+        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "Equipo= " + nombreEquipo + "]";
+    }
 }

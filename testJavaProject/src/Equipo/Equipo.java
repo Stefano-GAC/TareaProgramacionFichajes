@@ -1,23 +1,27 @@
 package Equipo;
 
+import java.util.ArrayList;
+
 import Entrenador.Entrenador;
+import Jugador.Jugador;
 import Presidente.Presidente;
 
 public class Equipo {
+
     private String nombreEquipo;
     private String abrevEquipo;
 
-    private Entrenador nombreEntrenador;
-    private Presidente nombrePresidente;
-    private ArrayList<Jugador> jugadores;
+    private ArrayList<Jugador> listaJugadores;
 
-    public Equipo(String nombreEquipo, String abrevEquipo, Entrenador nombreEntrenador, Presidente nombrePresidente) {
+    public Equipo(String nombreEquipo, String abrevEquipo) {
         this.nombreEquipo = nombreEquipo;
         this.abrevEquipo = abrevEquipo;
+    }
 
-        this.nombreEntrenador = nombreEntrenador;
-        this.nombrePresidente = nombrePresidente;
-
+    public Equipo(String nombreEquipo, String abrevEquipo, ArrayList<Jugador> listaJugadores) {
+        this.nombreEquipo = nombreEquipo;
+        this.abrevEquipo = abrevEquipo;
+        this.listaJugadores = listaJugadores;
     }
 
     public String getNombreEquipo() {
@@ -36,8 +40,17 @@ public class Equipo {
         this.abrevEquipo = abrevEquipo;
     }
 
+    public ArrayList<Jugador> getListaJugadores() {
+        return listaJugadores;
+    }
+
+    public void setListaJugadores(ArrayList<Jugador> listaJugadores) {
+        this.listaJugadores = listaJugadores;
+    }
+
     @Override
     public String toString() {
-        return "Equipo [Nombre= " + nombreEquipo + "Abraviatura= " + abrevEquipo + "]";
+        return "Equipo [nombreEquipo=" + nombreEquipo + ", abrevEquipo=" + abrevEquipo + ", listaJugadores="
+                + listaJugadores + "]";
     }
 }
