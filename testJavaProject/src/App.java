@@ -1,5 +1,6 @@
 import java.sql.Date;
 import java.util.ArrayList;
+import java.util.List;
 
 import Entrenador.Entrenador;
 import Entrenador.Formacion;
@@ -7,33 +8,39 @@ import Equipo.Equipo;
 import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;
+import Presidente.Presidente;
 
 public class App {
         public static void main(String[] args) {
-                /** Creacion de objetos de la clase Presidente */
-                Presidente presidente1 = new Presidente("123456789A", "Carlos Martinez");
-                Presidente presidente2 = new Presidente("123456789B", "Camila Gonzalez");
-                Presidente presidente3 = new Presidente("123456789C", "Jose Rpdriguez");
 
-                /** Creacion de la lista de presidentes */
-                ArrayList<Presidente> presidentes = new ArrayList<>();
-                presidentes.add(presidente1);
-                presidentes.add(presidente2);
-                presidentes.add(presidente3);
+                /** Creacion de objetos de la clase Equipo */
+                Equipo equipo1 = new Equipo("Barcelona", "FCB");
+                Equipo equipo2 = new Equipo("Real Madrid", "RMD");
+                Equipo equipo3 = new Equipo("Atletico de Madrid", "ATM");
+
+                /** Creacion de objetos de la clase Presidente */
+                Presidente presidente1 = new Presidente("123456789A", "Carlos Martinez", equipo1);
+                Presidente presidente2 = new Presidente("123456789B", "Camila Gonzalez", equipo2);
+                Presidente presidente3 = new Presidente("123456789C", "Jose Rpdriguez", equipo3);
+
+                /** Creacion de objetos de la clase Entrenador */
+                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Formacion.Formacion343, equipo1);
+                Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141, equipo2);
+                Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433, equipo3);
 
                 /** Creacion de objeto de la clase Posicion y Traspaso */
-                Posicion posicionPortero = Posicion.Portero;
-                Posicion posicionDefensa = Posicion.Defensa;
-                Posicion posicionMedioCampista = Posicion.Medio_Campista;
-                Posicion posicionDelantero = Posicion.Delantero;
-                Posicion posicionAguatero = Posicion.Aguatero;
+                // Posicion posicionPortero = Posicion.Portero;
+                // Posicion posicionDefensa = Posicion.Defensa;
+                // Posicion posicionMedioCampista = Posicion.Medio_Campista;
+                // Posicion posicionDelantero = Posicion.Delantero;
+                // Posicion posicionAguatero = Posicion.Aguatero;
 
-                Traspaso traspasoSinSolicitar = Traspaso.SINSOLICITAR;
-                Traspaso traspasoSolicitado = Traspaso.SOLICITADO;
-                Traspaso traspasoAprobadoEntrenador = Traspaso.APROBADOENTRENADOR;
-                Traspaso traspasoAprobadoPresidente = Traspaso.APROBADOPRESIDENTE;
-                Traspaso traspasoRechazadoEntrenador = Traspaso.RECHAZADOENTRENADOR;
-                Traspaso traspasoRechazadoPresidente = Traspaso.RECHAZADOPRESIDENTE;
+                // Traspaso traspasoSinSolicitar = Traspaso.SINSOLICITAR;
+                // Traspaso traspasoSolicitado = Traspaso.SOLICITADO;
+                // Traspaso traspasoAprobadoEntrenador = Traspaso.APROBADOENTRENADOR;
+                // Traspaso traspasoAprobadoPresidente = Traspaso.APROBADOPRESIDENTE;
+                // Traspaso traspasoRechazadoEntrenador = Traspaso.RECHAZADOENTRENADOR;
+                // Traspaso traspasoRechazadoPresidente = Traspaso.RECHAZADOPRESIDENTE;
 
                 /** Creacion de objetos de la clase Jugador */
                 Jugador jugador1 = new Jugador("Luis Suárez", new Date(1987, 1, 24), "Uruguay", posicionDelantero, 9,
@@ -71,28 +78,6 @@ public class App {
                 jugadores.add(jugador8);
                 jugadores.add(jugador9);
                 jugadores.add(jugador10);
-
-                /** Creacion de objetos de la clase Entrenador */
-                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Formacion.Formacion343);
-                Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141);
-                Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433);
-
-                /** Creacion de la lista de Entrenador */
-                ArrayList<Entrenador> entrenadores = new ArrayList<>();
-                entrenadores.add(entrenador1);
-                entrenadores.add(entrenador2);
-                entrenadores.add(entrenador3);
-
-                /** Creacion de objetos de la clase Equipo */
-                Equipo equipo1 = new Equipo("Barcelona", "FCB");
-                Equipo equipo2 = new Equipo("Real Madrid", "RMD");
-                Equipo equipo3 = new Equipo("Atletico de Madrid", "ATM");
-
-                /** Creacion de la lista de Equipo */
-                ArrayList<Equipo> equipos = new ArrayList<>();
-                equipos.add(equipo1);
-                equipos.add(equipo2);
-                equipos.add(equipo3);
 
                 // ArrayList<Jugador> Barcelona = new ArrayList<Jugador>();
                 // Barcelona.add(jugador1);
