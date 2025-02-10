@@ -10,7 +10,7 @@ public class Jugador {
     private Date fechaNacimiento;
     private String paisOrigen;
     private Posicion posicionJugador;
-    private int Dorsal;
+    private int dorsal;
     private Traspaso traspasoJugador;
     private Equipo nombreEquipo;
 
@@ -21,16 +21,16 @@ public class Jugador {
      * @param fechaNacimiento
      * @param paisOrigen
      * @param posicionJugador
-     * @param Dorsal
+     * @param dorsal
      * @param traspasoJugador
      */
     public Jugador(String nombreCamiseta, Date fechaNacimiento, String paisOrigen, Posicion posicionJugador,
-            int Dorsal, Traspaso traspasoJugador) {
+            int dorsal, Traspaso traspasoJugador) {
         this.nombreCamiseta = nombreCamiseta;
         this.fechaNacimiento = fechaNacimiento;
         this.paisOrigen = paisOrigen;
         this.posicionJugador = posicionJugador;
-        this.Dorsal = Dorsal;
+        this.dorsal = dorsal;
         this.traspasoJugador = Traspaso.SINSOLICITAR;
     }
 
@@ -38,7 +38,7 @@ public class Jugador {
      * 
      * @return El nombre de la camiseta de un jugador
      */
-    public String getnombreCamiseta() {
+    public String getNombreCamiseta() {
         if (nombreCamiseta == null) {
             System.out.println("El nombre ingresado no es valido");
         }
@@ -50,7 +50,7 @@ public class Jugador {
      * 
      * @param nombreCamiseta
      */
-    public void setnombreCamiseta(String nombreCamiseta) {
+    public void setNombreCamiseta(String nombreCamiseta) {
         this.nombreCamiseta = nombreCamiseta;
     }
 
@@ -58,7 +58,7 @@ public class Jugador {
      * 
      * @return La fecha de nacimiento de un jugador
      */
-    public Date getfechaNacimiento() {
+    public Date getFechaNacimiento() {
         return fechaNacimiento;
     }
 
@@ -67,7 +67,7 @@ public class Jugador {
      * 
      * @param fechaNacimiento
      */
-    public void setfechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
@@ -75,7 +75,7 @@ public class Jugador {
      * 
      * @return muestra el pais de origen de un jugador
      */
-    public String getpaisOrigen() {
+    public String getPaisOrigen() {
         return paisOrigen;
     }
 
@@ -84,7 +84,7 @@ public class Jugador {
      * 
      * @param paisOrigen
      */
-    public void setpaisOrigen(String paisOrigen) {
+    public void setPaisOrigen(String paisOrigen) {
         this.paisOrigen = paisOrigen;
     }
 
@@ -92,7 +92,7 @@ public class Jugador {
      * 
      * @return muestra la posicion de un jugador
      */
-    public Posicion getposicionJugador() {
+    public Posicion getPosicionJugador() {
         return posicionJugador;
     }
 
@@ -101,7 +101,7 @@ public class Jugador {
      * 
      * @param posicionJugador
      */
-    public void setposicionJugador(Posicion posicionJugador) {
+    public void setPosicionJugador(Posicion posicionJugador) {
         this.posicionJugador = posicionJugador;
     }
 
@@ -112,26 +112,26 @@ public class Jugador {
      *         menor a 0
      */
     public int getDorsal() {
-        if (Dorsal < 0) {
+        if (dorsal < 0) {
             System.out.println("El dorsal es incorrecto");
         }
-        return Dorsal;
+        return dorsal;
     }
 
     /**
      * Pone o modifica el dorsal de la camisa de un jugador
      * 
-     * @param Dorsal
+     * @param dorsal
      */
-    public void setDorsal(int Dorsal) {
-        this.Dorsal = Dorsal;
+    public void setDorsal(int dorsal) {
+        this.dorsal = dorsal;
     }
 
     /**
      * 
      * @return muestra el estado de traspaso de un jugador
      */
-    public Traspaso gettraspasoJugador() {
+    public Traspaso getTraspasoJugador() {
         return traspasoJugador;
     }
 
@@ -140,7 +140,7 @@ public class Jugador {
      * 
      * @param traspasoJugador
      */
-    public void settraspasoJugador(Traspaso traspasoJugador) {
+    public void setTraspasoJugador(Traspaso traspasoJugador) {
         this.traspasoJugador = traspasoJugador;
     }
 
@@ -167,10 +167,10 @@ public class Jugador {
      * Y si es igual muestra que ya lo ha solicitado
      */
     public void jugadorTraspaso() {
-        System.out.println("El estado actual del traspaso es: " + traspasoJugador);
+        System.out.println("El estado actual del traspaso del jugador " + nombreCamiseta + " es: " + traspasoJugador);
         if (traspasoJugador == Traspaso.SINSOLICITAR) {
             traspasoJugador = Traspaso.SOLICITADO;
-            System.out.println("El jugador " + nombreCamiseta + "solicita un traspaso.");
+            System.out.println("El jugador " + nombreCamiseta + " solicita un traspaso.");
             System.out.println("El nuevo estado del traspaso es: " + traspasoJugador);
         } else {
             System.out.println("Este jugador ya solicitó un traspaso");
@@ -184,7 +184,7 @@ public class Jugador {
     @Override
     public String toString() {
         return "Jugador [nombreCamiseta= " + nombreCamiseta + ", fechaNacimiento= " + fechaNacimiento
-                + ", paisOrigen= " + paisOrigen + ", posicionJugador= " + posicionJugador + ", Dorsal= " + Dorsal
+                + ", paisOrigen= " + paisOrigen + ", posicionJugador= " + posicionJugador + ", dorsal= " + dorsal
                 + ", traspasoJugador= " + traspasoJugador + "]";
     }
 
