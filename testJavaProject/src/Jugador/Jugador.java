@@ -12,7 +12,7 @@ public class Jugador {
     private Posicion posicionJugador;
     private int dorsal;
     private Traspaso traspasoJugador;
-    private Equipo nombreEquipo;
+    private Equipo equipo;
 
     /**
      * Constructor del nuevo jugador
@@ -25,11 +25,12 @@ public class Jugador {
      * @param traspasoJugador
      */
     public Jugador(String nombreCamiseta, Date fechaNacimiento, String paisOrigen, Posicion posicionJugador,
-            int dorsal, Traspaso traspasoJugador) {
+            int dorsal, Equipo equipo) {
         this.nombreCamiseta = nombreCamiseta;
         this.fechaNacimiento = fechaNacimiento;
         this.paisOrigen = paisOrigen;
         this.posicionJugador = posicionJugador;
+        this.equipo = equipo;
         this.dorsal = dorsal;
         this.traspasoJugador = Traspaso.SINSOLICITAR;
     }
@@ -108,22 +109,22 @@ public class Jugador {
     /**
      * 
      * @return muestra el dorsal de la camisa de un jugador
-     *         Contiene una condicion para que el dorsal no pueda ser un numero
-     *         menor a 0
+     *         
      */
     public int getDorsal() {
-        if (dorsal < 0) {
-            System.out.println("El dorsal es incorrecto");
-        }
         return dorsal;
     }
 
     /**
      * Pone o modifica el dorsal de la camisa de un jugador
-     * 
+     * Contiene una condicion para que el dorsal no pueda ser un numero
+     *         menor a 0
      * @param dorsal
      */
     public void setDorsal(int dorsal) {
+        if (dorsal < 0) {
+            System.out.println("El dorsal es incorrecto");
+        }
         this.dorsal = dorsal;
     }
 
@@ -148,17 +149,17 @@ public class Jugador {
      * 
      * @return El nombre del equipo del jugador
      */
-    public Equipo getNombreEquipo() {
-        return nombreEquipo;
+    public Equipo getequipo() {
+        return equipo;
     }
 
     /**
      * Pone o modifica el nombre del equipo de un jugador
      * 
-     * @param nombreEquipo
+     * @param equipo
      */
-    public void setNombreEquipo(Equipo nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;
+    public void setequipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 
     /**
