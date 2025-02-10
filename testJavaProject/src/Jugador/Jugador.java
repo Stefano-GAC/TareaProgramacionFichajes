@@ -149,7 +149,7 @@ public class Jugador {
      * 
      * @return El nombre del equipo del jugador
      */
-    public Equipo getequipo() {
+    public Equipo getEquipo() {
         return equipo;
     }
 
@@ -158,7 +158,7 @@ public class Jugador {
      * 
      * @param equipo
      */
-    public void setequipo(Equipo equipo) {
+    public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
     }
 
