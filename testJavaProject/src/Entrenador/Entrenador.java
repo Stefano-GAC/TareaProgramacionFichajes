@@ -58,13 +58,13 @@ public class Entrenador {
     }
 
     public void entrenadorDecision(Jugador jugador) {
-        if (jugador.gettraspasoJugador() == Traspaso.SOLICITADO) {
+        if (jugador.getTraspasoJugador() == Traspaso.SOLICITADO) {
             if (jugador.getNombreEquipo().equals(this.nombreEquipo)) {
-                jugador.settraspasoJugador(Traspaso.APROBADOENTRENADOR);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.gettraspasoJugador());
+                jugador.setTraspasoJugador(Traspaso.APROBADOENTRENADOR);
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspasoJugador());
             } else {
-                if (jugador.getNombreEquipo() != this.nombreEquipo) {
-                    jugador.settraspasoJugador(Traspaso.RECHAZADOENTRENADOR);
+                if (!jugador.getNombreEquipo().equals(this.nombreEquipo)) {
+                    jugador.setTraspasoJugador(Traspaso.RECHAZADOENTRENADOR);
                 }
 
             }
