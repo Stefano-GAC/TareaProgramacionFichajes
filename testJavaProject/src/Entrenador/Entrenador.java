@@ -7,7 +7,7 @@ import Jugador.Traspaso;
 public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
-    private Traspaso Traspaso_jugador;
+    private Traspaso traspasoJugador;
     private Equipo nombreEquipo;
 
     /**
@@ -58,13 +58,13 @@ public class Entrenador {
     }
 
     public void entrenadorDecision(Jugador jugador) {
-        if (jugador.getTraspaso_jugador == Traspaso.SOLICITADO) {
-            if (Jugador.getnombreEquipo == this.nombreEquipo) {
-                jugador.setTraspaso_jugador(Traspaso.APROBADOENTRENADOR);
-                System.out.println("El nuevo estado del traspaso es: " + Traspaso_jugador);
+        if (jugador.getTraspasoJugador() == Traspaso.SOLICITADO) {
+            if (jugador.getNombreEquipo().equals(this.nombreEquipo)) {
+                jugador.setTraspasoJugador(Traspaso.APROBADOENTRENADOR);
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspasoJugador());
             } else {
-                if (Jugador.getnombreEquipo != this.nombreEquipo) {
-                    jugador.setTraspaso_jugador(Traspaso.RECHAZADOENTRENADOR);
+                if (!jugador.getNombreEquipo().equals(this.nombreEquipo)) {
+                    jugador.setTraspasoJugador(Traspaso.RECHAZADOENTRENADOR);
                 }
 
             }
