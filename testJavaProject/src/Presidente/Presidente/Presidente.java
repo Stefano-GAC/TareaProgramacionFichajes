@@ -7,19 +7,18 @@ import Jugador.Jugador;
 public class Presidente {
     private String Dni;
     private String Nombre;
-
-    private Equipo nombreEquipo;
+    private Equipo equipo;
 
     /**
      * 
      * @param Dni          Identificacion del presidente
      * @param Nombre       Nombre del presidente
-     * @param nombreEquipo Equipo al que pertenece el presidente
+     * @param equipo Equipo al que pertenece el presidente
      */
-    public Presidente(String Dni, String Nombre, Equipo nombreEquipo) {
+    public Presidente(String Dni, String Nombre, Equipo equipo) {
         this.Dni = Dni;
         this.Nombre = Nombre;
-        this.nombreEquipo = nombreEquipo;
+        this.equipo = equipo;
     }
 
     /**
@@ -60,26 +59,26 @@ public class Presidente {
      * 
      * @return El nombre del equipo
      */
-    public Equipo getNombreEquipo() {
-        return nombreEquipo;
+    public Equipo getequipo() {
+        return equipo;
     }
 
     /**
      * Pone o modifica el nombre del equipo
      * 
-     * @param nombreEquipo
+     * @param equipo
      */
-    public void setNombreEquipo(Equipo nombreEquipo) {
-        this.nombreEquipo = nombreEquipo;
+    public void setequipo(Equipo equipo) {
+        this.equipo = equipo;
     }
 
     public void presidenteDecision(Jugador jugador) {
-        if (Jugador.getTraspaso_jugador == Traspaso.APROBADOENTRENADOR) {
-            if (Jugador.getnombreEquipo == this.nombreEquipo) {
-                jugador.setTraspaso_jugador(Traspaso.APROBADOPRESIDENTE);
+        if (Jugador.getTraspasoJugador() == Traspaso.APROBADOENTRENADOR) {
+            if (Jugador.getEquipo().equals(this.equipo)) {
+                jugador.setTraspasoJugador(Traspaso.APROBADOPRESIDENTE);
             } else {
-                if (Jugador.getnombreEquipo != this.nombreEquipo) {
-                    jugador.setTraspaso_jugador(Traspaso.RECHAZADOPRESIDENTE);
+                if (Jugador.getEquipo() != this.equipo) {
+                    jugador.setTraspasoJugador(Traspaso.RECHAZADOPRESIDENTE);
                 }
             }
         }
@@ -91,6 +90,6 @@ public class Presidente {
      */
     @Override
     public String toString() {
-        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "Equipo= " + nombreEquipo + "]";
+        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "Equipo= " + equipo + "]";
     }
 }

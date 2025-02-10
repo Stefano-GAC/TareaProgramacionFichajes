@@ -132,7 +132,7 @@ public class Jugador {
      * 
      * @return muestra el estado de traspaso de un jugador
      */
-    public Traspaso getTraspasoJugador() {
+    public static Traspaso getTraspasoJugador() {
         return traspasoJugador;
     }
 
@@ -149,7 +149,7 @@ public class Jugador {
      * 
      * @return El nombre del equipo del jugador
      */
-    public Equipo getEquipo() {
+    public static Equipo getEquipo() {
         return equipo;
     }
 
