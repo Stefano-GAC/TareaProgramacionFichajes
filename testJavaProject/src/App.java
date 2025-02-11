@@ -87,6 +87,19 @@ public class App {
                 equipo3.setListaJugadores(jugadores3);
 
                 /**
+                 * Se asignan los equipos a los jugadores
+                 */
+                jugador1.setEquipo(equipo1);
+                jugador2.setEquipo(equipo1);
+                jugador3.setEquipo(equipo1);
+                jugador4.setEquipo(equipo2);
+                jugador5.setEquipo(equipo2);
+                jugador6.setEquipo(equipo2);
+                jugador7.setEquipo(equipo3);
+                jugador8.setEquipo(equipo3);
+                jugador9.setEquipo(equipo3);
+
+                /**
                  * Prueba de los toString
                  */
                 System.out.println("Los Jugadores del Barcelona son:");

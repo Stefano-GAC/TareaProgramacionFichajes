@@ -11,8 +11,8 @@ public class Presidente {
 
     /**
      * 
-     * @param Dni          Identificacion del presidente
-     * @param Nombre       Nombre del presidente
+     * @param Dni    Identificacion del presidente
+     * @param Nombre Nombre del presidente
      * @param equipo Equipo al que pertenece el presidente
      */
     public Presidente(String Dni, String Nombre, Equipo equipo) {
@@ -73,12 +73,12 @@ public class Presidente {
     }
 
     public void presidenteDecision(Jugador jugador) {
-        if (Jugador.getTraspasoJugador() == Traspaso.APROBADOENTRENADOR) {
-            if (Jugador.getEquipo().equals(this.equipo)) {
-                jugador.setTraspasoJugador(Traspaso.APROBADOPRESIDENTE);
+        if (jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR) {
+            if (jugador.getEquipo().equals(this.equipo)) {
+                jugador.setTraspaso(Traspaso.APROBADOPRESIDENTE);
             } else {
-                if (Jugador.getEquipo() != this.equipo) {
-                    jugador.setTraspasoJugador(Traspaso.RECHAZADOPRESIDENTE);
+                if (jugador.getEquipo() != this.equipo) {
+                    jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
                 }
             }
         }
