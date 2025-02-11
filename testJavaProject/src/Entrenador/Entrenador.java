@@ -8,19 +8,19 @@ public class Entrenador {
     private String nombreEntrenador;
     private Formacion formacionPreferida;
     private Traspaso traspasoJugador;
-    private Equipo nombreEquipo;
+    private Equipo equipo;
 
     /**
      * Constructor de Entrnador
      * 
      * @param nombreEntrenador
      * @param formacionPreferida
-     * @param nombreEquipo
+     * @param equipo
      */
-    public Entrenador(String nombreEntrenador, Formacion formacionPreferida, Equipo nombreEquipo) {
+    public Entrenador(String nombreEntrenador, Formacion formacionPreferida, Equipo equipo) {
         this.nombreEntrenador = nombreEntrenador;
         this.formacionPreferida = formacionPreferida;
-        this.nombreEquipo = nombreEquipo;
+        this.equipo = equipo;
     }
 
     /**
@@ -59,11 +59,11 @@ public class Entrenador {
 
     public void entrenadorDecision(Jugador jugador) {
         if (jugador.getTraspasoJugador() == Traspaso.SOLICITADO) {
-            if (jugador.getNombreEquipo().equals(this.nombreEquipo)) {
+            if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspasoJugador(Traspaso.APROBADOENTRENADOR);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspasoJugador());
             } else {
-                if (!jugador.getNombreEquipo().equals(this.nombreEquipo)) {
+                if (!jugador.getEquipo().equals(this.equipo)) {
                     jugador.setTraspasoJugador(Traspaso.RECHAZADOENTRENADOR);
                 }
 
@@ -77,6 +77,6 @@ public class Entrenador {
     @Override
     public String toString() {
         return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "Equipo = "
-                + nombreEquipo + "]";
+                + equipo + "]";
     }
 }

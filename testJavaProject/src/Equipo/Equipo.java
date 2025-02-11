@@ -2,12 +2,17 @@ package Equipo;
 
 import java.util.ArrayList;
 
+import Entrenador.Entrenador;
 import Jugador.Jugador;
+import Presidente.Presidente;
 
 public class Equipo {
 
     private String nombreEquipo;
     private String abrevEquipo;
+    private ArrayList<Jugador> jugadores;
+    private Entrenador entrenador;
+    private Presidente presidente;
 
     /**
      * Relacion lista de Jugadores en Equipos
@@ -25,6 +30,7 @@ public class Equipo {
     public Equipo(String nombreEquipo, String abrevEquipo) {
         this.nombreEquipo = nombreEquipo;
         this.abrevEquipo = abrevEquipo;
+        this.jugadores = new ArrayList<>();
     }
 
     /**
@@ -57,6 +63,16 @@ public class Equipo {
     public void setNombreEquipo(String nombreEquipo) {
         this.nombreEquipo = nombreEquipo;
     }
+
+
+    public void agregarJugador(Jugador jugador){
+        jugadores.add(jugador);
+    }
+
+    public void eliminarJugador(Jugador jugador){
+        jugadores.remove(jugador);
+    }
+
 
     /**
      * 
@@ -98,6 +114,6 @@ public class Equipo {
     @Override
     public String toString() {
         return "Equipo [nombreEquipo=" + nombreEquipo + ", abrevEquipo=" + abrevEquipo + ", listaJugadores="
-                + listaJugadores + "]";
+                + jugadores.size() + "]";
     }
 }
