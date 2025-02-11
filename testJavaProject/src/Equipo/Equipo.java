@@ -2,9 +2,9 @@ package Equipo;
 
 import java.util.ArrayList;
 
+import Presidente.Presidente;
 import Entrenador.Entrenador;
 import Jugador.Jugador;
-import Presidente.Presidente;
 
 public class Equipo {
 
@@ -64,15 +64,13 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-
-    public void agregarJugador(Jugador jugador){
+    public void agregarJugador(Jugador jugador) {
         jugadores.add(jugador);
     }
 
-    public void eliminarJugador(Jugador jugador){
+    public void eliminarJugador(Jugador jugador) {
         jugadores.remove(jugador);
     }
-
 
     /**
      * 

@@ -76,9 +76,11 @@ public class Presidente {
         if (jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR) {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOPRESIDENTE);
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso());
             } else {
                 if (jugador.getEquipo() != this.equipo) {
                     jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
+                    System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso());
                 }
             }
         }
