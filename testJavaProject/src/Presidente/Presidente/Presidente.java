@@ -83,6 +83,10 @@ public class Presidente {
                     System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso());
                 }
             }
+            if ((jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR)
+                    || (jugador.getTraspaso() == Traspaso.RECHAZADOPRESIDENTE)) {
+                System.out.println("Proceso finalizado, no hay más cambios");
+            }
         }
 
     }
