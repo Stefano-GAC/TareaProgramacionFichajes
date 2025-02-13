@@ -62,13 +62,14 @@ public class Entrenador {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOENTRENADOR);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + "despues del aprobado de " + nombreEntrenador);
+                        + " despues del aprobado de " + nombreEntrenador);
             } else {
-                if (!jugador.getEquipo().equals(this.equipo)) {
-                    jugador.setTraspaso(Traspaso.RECHAZADOENTRENADOR);
-                }
+                jugador.setTraspaso(Traspaso.RECHAZADOENTRENADOR);
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
+                        + " despues del rechazo de " + nombreEntrenador);
 
             }
+
         }
     }
 

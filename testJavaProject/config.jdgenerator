@@ -1,0 +1,331 @@
+==== CONFIGS ====		
+{
+    "base_path": "c:\\Users\\Usuario\\Desktop\\Programación\\Practica T2\\testJavaProject",
+    "out": "c:\\Users\\Usuario\\Desktop\\Programación\\Practica T2\\testJavaProject\\javadoc",
+    "javadoc_executable": "C:\\Program Files\\Java\\jdk-23\\bin\\javadoc.exe",
+    "exclude": [],
+    "raw_params": ""
+}
+
+==== COMMAND ====
+"C:\Program Files\Java\jdk-23\bin\javadoc.exe" 
+	-sourcepath "c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject" 
+	-d "c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\javadoc" 
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\App.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Entrenador\Entrenador.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Entrenador\Formacion.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Equipo\Equipo.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Jugador\Jugador.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Jugador\Posicion.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Jugador\Traspaso.java"
+	"c:\Users\Usuario\Desktop\Programación\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java"
+
+
+==== JAVADOC OUTPUT ====
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\App.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java...
+Loading source file c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java...
+Constructing Javadoc information...
+Building index for all the packages and classes...
+Standard Doclet version 23+37-2369
+Building tree for all the packages and classes...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\App.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\App.java:12: warning: no comment
+public class App {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\App.java:12: warning: use of default constructor, which does not provide a comment
+public class App {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\App.java:13: warning: no comment
+        public static void main(String[] args) {
+                           ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Entrenador\Entrenador.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:16: warning: no description for @param
+     * @param nombreEntrenador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:17: warning: no description for @param
+     * @param formacionPreferida
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:18: warning: no description for @param
+     * @param equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:28: warning: no main description
+     * @return El nombre del entrenador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:37: warning: no description for @param
+     * @param nombreEntrenador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:45: warning: no main description
+     * @return muestra la formacion elegida por un Entrenador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:54: warning: no description for @param
+     * @param formacionPreferida
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:7: warning: no comment
+public class Entrenador {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Entrenador.java:60: warning: no comment
+    public void entrenadorDecision(Jugador jugador) {
+                ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Equipo\Equipo.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:26: warning: no description for @param
+     * @param nombreEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:27: warning: no description for @param
+     * @param abrevEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:39: warning: no description for @param
+     * @param nombreEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:40: warning: no description for @param
+     * @param abrevEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:41: warning: no description for @param
+     * @param listaJugadores
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:52: warning: no main description
+     * @return Nombre del equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:61: warning: no description for @param
+     * @param nombreEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:77: warning: no main description
+     * @return Abreviatura del equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:86: warning: no description for @param
+     * @param abrevEquipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:94: warning: no main description
+     * @return la lista completa de los jugadores de un equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:103: warning: no description for @param
+     * @param listaJugadores
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:9: warning: no comment
+public class Equipo {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:67: warning: no comment
+    public void agregarJugador(Jugador jugador) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Equipo\Equipo.java:71: warning: no comment
+    public void eliminarJugador(Jugador jugador) {
+                ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Entrenador\Formacion.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:3: warning: no comment
+public enum Formacion {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                                            ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                                                                                       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                                                                        ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                                                          ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+                  ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Entrenador\Formacion.java:4: warning: no comment
+    Formacion532, Formacion451, Formacion442, Formacion433, Formacion343, Formacion424, Formacion4141, Formacion352
+    ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Jugador\Jugador.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:20: warning: no description for @param
+     * @param nombreCamiseta
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:21: warning: no description for @param
+     * @param fechaNacimiento
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:22: warning: no description for @param
+     * @param paisOrigen
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:23: warning: no description for @param
+     * @param posicionJugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:24: warning: no description for @param
+     * @param dorsal
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:25: warning: no description for @param
+     * @param traspaso
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:39: warning: no main description
+     * @return El nombre de la camiseta de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:51: error: @param name not found
+     * @param NombreCamiseta
+              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:51: warning: no description for @param
+     * @param NombreCamiseta
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:53: warning: no @param for nombreCamiseta
+    public void setNombreCamiseta(String nombreCamiseta) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:59: warning: no main description
+     * @return La fecha de nacimiento de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:68: error: @param name not found
+     * @param FechaNacimiento
+              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:68: warning: no description for @param
+     * @param FechaNacimiento
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:70: warning: no @param for fechaNacimiento
+    public void setFechaNacimiento(Date fechaNacimiento) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:76: warning: no main description
+     * @return muestra el pais de origen de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:85: error: @param name not found
+     * @param PaisOrigen
+              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:85: warning: no description for @param
+     * @param PaisOrigen
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:87: warning: no @param for paisOrigen
+    public void setPaisOrigen(String paisOrigen) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:93: warning: no main description
+     * @return muestra la posicion de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:102: error: @param name not found
+     * @param PosicionJugador
+              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:102: warning: no description for @param
+     * @param PosicionJugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:104: warning: no @param for posicionJugador
+    public void setPosicionJugador(Posicion posicionJugador) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:110: warning: no main description
+     * @return muestra el dorsal de la camisa de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:122: warning: no description for @param
+     * @param dorsal
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:133: warning: no main description
+     * @return muestra el estado de traspaso de un jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:142: error: @param name not found
+     * @param traspasoJugador
+              ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:142: warning: no description for @param
+     * @param traspasoJugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:144: warning: no @param for traspaso
+    public void setTraspaso(Traspaso traspaso) {
+                ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:150: warning: no main description
+     * @return El nombre del equipo del jugador
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:159: warning: no description for @param
+     * @param equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Jugador.java:8: warning: no comment
+public class Jugador {
+       ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Jugador\Posicion.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:3: warning: no comment
+public enum Posicion {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:4: warning: no comment
+    Portero, Defensa, Medio_Campista, Delantero, Aguatero;
+                                                 ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:4: warning: no comment
+    Portero, Defensa, Medio_Campista, Delantero, Aguatero;
+             ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:4: warning: no comment
+    Portero, Defensa, Medio_Campista, Delantero, Aguatero;
+                                      ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:4: warning: no comment
+    Portero, Defensa, Medio_Campista, Delantero, Aguatero;
+                      ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Posicion.java:4: warning: no comment
+    Portero, Defensa, Medio_Campista, Delantero, Aguatero;
+    ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Presidente\Presidente.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:14: warning: no main description
+     * @param dni    Identificacion del presidente
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:26: warning: no main description
+     * @return muestra la identificacion del presidente
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:35: warning: no description for @param
+     * @param dni
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:43: warning: no main description
+     * @return El nombre del presidente
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:52: warning: no description for @param
+     * @param nombre
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:60: warning: no main description
+     * @return El nombre del equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:69: warning: no description for @param
+     * @param equipo
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:7: warning: no comment
+public class Presidente {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Presidente\Presidente\Presidente.java:75: warning: no comment
+    public void presidenteDecision(Jugador jugador) {
+                ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Jugador\Traspaso.html...
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:3: warning: no comment
+public enum Traspaso {
+       ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:6: warning: no comment
+    APROBADOENTRENADOR,
+    ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:7: warning: no comment
+    APROBADOPRESIDENTE,
+    ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:8: warning: no comment
+    RECHAZADOENTRENADOR,
+    ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:9: warning: no comment
+    RECHAZADOPRESIDENTE;
+    ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:4: warning: no comment
+    SINSOLICITAR,
+    ^
+c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\src\Jugador\Traspaso.java:5: warning: no comment
+    SOLICITADO,
+    ^
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\package-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\package-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Entrenador\package-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Entrenador\package-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Equipo\package-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Equipo\package-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Jugador\package-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Jugador\package-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Presidente\package-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\Presidente\package-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\overview-tree.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\index.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\allclasses-index.html...
+Building index for all classes...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\allpackages-index.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\index-all.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\search.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\overview-summary.html...
+Generating c:\Users\Usuario\Desktop\Programaci�n\Practica T2\testJavaProject\javadoc\help-doc.html...
+5 errors
+83 warnings
+
+
