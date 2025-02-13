@@ -77,7 +77,7 @@ public class Presidente {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOPRESIDENTE);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del aprobado del entrenador " + nombre);
+                        + " despues del aprobado del presidente " + nombre);
             } else {
                 jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
@@ -87,7 +87,6 @@ public class Presidente {
         if ((jugador.getTraspaso() == Traspaso.APROBADOPRESIDENTE)
                 || (jugador.getTraspaso() == Traspaso.RECHAZADOPRESIDENTE)
                 || (jugador.getTraspaso() == Traspaso.RECHAZADOENTRENADOR)) {
-            System.out.println("Proceso finalizado, no hay más cambios");
         }
     }
 

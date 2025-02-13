@@ -64,14 +64,6 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
     }
 
-    public void agregarJugador(Jugador jugador) {
-        jugadores.add(jugador);
-    }
-
-    public void eliminarJugador(Jugador jugador) {
-        jugadores.remove(jugador);
-    }
-
     /**
      * 
      * @return Abreviatura del equipo
@@ -104,6 +96,22 @@ public class Equipo {
      */
     public void setListaJugadores(ArrayList<Jugador> listaJugadores) {
         this.listaJugadores = listaJugadores;
+    }
+
+    /**
+     * Metodo para el movimiento luego del traspaso
+     * Elimina el jugador de su equipo actual.
+     */
+    public boolean eliminarJugador(Jugador jugador) {
+        return listaJugadores.remove(jugador);
+    }
+
+    /**
+     * Añade el jugador al nuevo equipo.
+     */
+    public void agregarJugador(Jugador jugador) {
+        listaJugadores.add(jugador);
+        jugador.setEquipo(this);
     }
 
     /**
