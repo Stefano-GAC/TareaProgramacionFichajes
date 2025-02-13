@@ -118,14 +118,28 @@ public class App {
                 System.out.println("El entrenador del Atlético de Madrid es:" + entrenador3);
 
                 System.out.println("-------------------------");
-                System.out.println("Primera solicitud de traspaso");
 
                 /**
                  * Metodos para realizar el Traspaso
                  */
-                jugador1.jugadorTraspaso();
-                entrenador1.entrenadorDecision(jugador1);
-                presidente1.presidenteDecision(jugador1);
+                System.out.println("Traspaso de jugador con entrenador y presidente del mismo equipo: ");
+                jugador3.jugadorTraspaso();
+                entrenador1.entrenadorDecision(jugador3);
+                presidente1.presidenteDecision(jugador3);
+                System.out.println("-------------------------");
+
+                System.out.println("Traspaso de jugador con entrenador de diferente equipo rechazado: ");
+                jugador5.jugadorTraspaso();
+                entrenador3.entrenadorDecision(jugador5);
+                presidente3.presidenteDecision(jugador5);
+                System.out.println("-------------------------");
+
+                System.out.println(
+                                "Traspaso de jugador con entrenador del mismo equipo , pero con presidente de equipo diferente: ");
+                jugador8.jugadorTraspaso();
+                entrenador3.entrenadorDecision(jugador8);
+                presidente1.presidenteDecision(jugador8);
+                System.out.println("-------------------------");
 
         }
 }

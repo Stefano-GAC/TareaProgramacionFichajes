@@ -5,19 +5,19 @@ import Jugador.Traspaso;
 import Jugador.Jugador;
 
 public class Presidente {
-    private String Dni;
-    private String Nombre;
+    private String dni;
+    private String nombre;
     private Equipo equipo;
 
     /**
      * 
-     * @param Dni    Identificacion del presidente
-     * @param Nombre Nombre del presidente
+     * @param dni    Identificacion del presidente
+     * @param nombre Nombre del presidente
      * @param equipo Equipo al que pertenece el presidente
      */
-    public Presidente(String Dni, String Nombre, Equipo equipo) {
-        this.Dni = Dni;
-        this.Nombre = Nombre;
+    public Presidente(String dni, String nombre, Equipo equipo) {
+        this.dni = dni;
+        this.nombre = nombre;
         this.equipo = equipo;
     }
 
@@ -26,7 +26,7 @@ public class Presidente {
      * @return muestra la identificacion del presidente
      */
     public String getDni() {
-        return Dni;
+        return dni;
     }
 
     /**
@@ -35,7 +35,7 @@ public class Presidente {
      * @param dni
      */
     public void setDni(String dni) {
-        Dni = dni;
+        dni = dni;
     }
 
     /**
@@ -43,7 +43,7 @@ public class Presidente {
      * @return El nombre del presidente
      */
     public String getNombre() {
-        return Nombre;
+        return nombre;
     }
 
     /**
@@ -52,7 +52,7 @@ public class Presidente {
      * @param nombre
      */
     public void setNombre(String nombre) {
-        Nombre = nombre;
+        nombre = nombre;
     }
 
     /**
@@ -76,19 +76,19 @@ public class Presidente {
         if (jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR) {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOPRESIDENTE);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso());
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
+                        + " despues del aprobado del entrenador " + nombre);
             } else {
-                if (jugador.getEquipo() != this.equipo) {
-                    jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
-                    System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso());
-                }
-            }
-            if ((jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR)
-                    || (jugador.getTraspaso() == Traspaso.RECHAZADOPRESIDENTE)) {
-                System.out.println("Proceso finalizado, no hay más cambios");
+                jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
+                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
+                        + "despues de la negativa de " + nombre);
             }
         }
-
+        if ((jugador.getTraspaso() == Traspaso.APROBADOPRESIDENTE)
+                || (jugador.getTraspaso() == Traspaso.RECHAZADOPRESIDENTE)
+                || (jugador.getTraspaso() == Traspaso.RECHAZADOENTRENADOR)) {
+            System.out.println("Proceso finalizado, no hay más cambios");
+        }
     }
 
     /**
@@ -96,6 +96,6 @@ public class Presidente {
      */
     @Override
     public String toString() {
-        return "Presidente [Dni= " + Dni + "Nombre= " + Nombre + "Equipo= " + equipo + "]";
+        return "Presidente [Dni= " + dni + "Nombre= " + nombre + "Equipo= " + equipo + "]";
     }
 }
