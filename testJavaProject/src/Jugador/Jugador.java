@@ -6,6 +6,8 @@ import Equipo.Equipo;
 import Jugador.Traspaso;
 
 public class Jugador {
+    private static int contador = 0; 
+
     private String nombreCamiseta;
     private Date fechaNacimiento;
     private String paisOrigen;
@@ -32,6 +34,7 @@ public class Jugador {
         this.posicionJugador = posicionJugador;
         this.dorsal = dorsal;
         this.traspaso = Traspaso.SINSOLICITAR;
+        contador++;
     }
 
     /**
@@ -160,6 +163,14 @@ public class Jugador {
      */
     public void setEquipo(Equipo equipo) {
         this.equipo = equipo;
+    }
+
+    /**
+     * 
+     * @return el contador de los jugadores
+     */
+    public static int getContador(){
+        return contador;
     }
 
     /**

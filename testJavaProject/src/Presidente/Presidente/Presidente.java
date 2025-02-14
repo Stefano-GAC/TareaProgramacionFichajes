@@ -5,6 +5,8 @@ import Jugador.Traspaso;
 import Jugador.Jugador;
 
 public class Presidente {
+    private static int contador = 0;
+
     private String dni;
     private String nombre;
     private Equipo equipo;
@@ -19,6 +21,7 @@ public class Presidente {
         this.dni = dni;
         this.nombre = nombre;
         this.equipo = equipo;
+        contador++;
     }
 
     /**
@@ -70,6 +73,14 @@ public class Presidente {
      */
     public void setequipo(Equipo equipo) {
         this.equipo = equipo;
+    }
+
+    /**
+     * 
+     * @return el contador de los presidentes
+     */
+    public static int getContador(){
+        return contador;
     }
 
     public void presidenteDecision(Jugador jugador) {

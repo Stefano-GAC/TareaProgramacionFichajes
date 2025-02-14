@@ -5,6 +5,8 @@ import Equipo.Equipo;
 import Jugador.Traspaso;
 
 public class Entrenador {
+    private static int contador = 0;
+
     private String nombreEntrenador;
     private Formacion formacionPreferida;
     private Traspaso traspasoJugador;
@@ -21,6 +23,7 @@ public class Entrenador {
         this.nombreEntrenador = nombreEntrenador;
         this.formacionPreferida = formacionPreferida;
         this.equipo = equipo;
+        contador++;
     }
 
     /**
@@ -46,6 +49,14 @@ public class Entrenador {
      */
     public Formacion getFormacionPreferida() {
         return formacionPreferida;
+    }
+
+    /**
+     * 
+     * @return contadir de los entrenadores
+     */
+    public static int getContador() {
+        return contador;
     }
 
     /**

@@ -155,6 +155,12 @@ public class App {
 
                 System.out.println("-------------------------");
 
+                System.out.println("Total jugadores creados: " + Jugador.getContador());
+                System.out.println("Total entrenadores creados: " + Entrenador.getContador());
+                System.out.println("Total equipos creados: " + Equipo.getContador());
+                System.out.println("Total presidentes creados: " + Presidente.getContador());
+
+
         }
 
 }

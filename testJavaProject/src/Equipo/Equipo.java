@@ -7,6 +7,7 @@ import Entrenador.Entrenador;
 import Jugador.Jugador;
 
 public class Equipo {
+    private static int contador = 0;
 
     private String nombreEquipo;
     private String abrevEquipo;
@@ -31,6 +32,7 @@ public class Equipo {
         this.nombreEquipo = nombreEquipo;
         this.abrevEquipo = abrevEquipo;
         this.jugadores = new ArrayList<>();
+        contador++;
     }
 
     /**
@@ -112,6 +114,14 @@ public class Equipo {
     public void agregarJugador(Jugador jugador) {
         listaJugadores.add(jugador);
         jugador.setEquipo(this);
+    }
+
+    /**
+     * 
+     * @return contador de los equipos
+     */
+    public static int getContador(){
+        return contador;
     }
 
     /**
