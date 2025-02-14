@@ -171,12 +171,29 @@ public class Jugador {
         System.out.println("El estado actual del traspaso del jugador " + nombreCamiseta + " es: " + traspaso);
         if (getTraspaso() == Traspaso.SINSOLICITAR) {
             traspaso = Traspaso.SOLICITADO;
-            System.out.println("El jugador " + nombreCamiseta + " solicita un traspaso.");
+            System.out.println("El jugador " + nombreCamiseta + " solicita un traspaso de su equipo actual "
+                    + equipo.getNombreEquipo());
             System.out.println("El nuevo estado del traspaso es: " + traspaso);
         } else {
             System.out.println("Este jugador ya solicitó un traspaso");
         }
+    }
 
+    /**
+     * Metodo para mover al jugador
+     */
+    public void moverJugador(Equipo nuevoEquipo) {
+        if (traspaso != Traspaso.APROBADOPRESIDENTE) {
+            System.out.println("No se realiza ningun cambio, el traspaso fue rechazado");
+        } else {
+            if (traspaso == Traspaso.APROBADOPRESIDENTE) {
+                equipo.eliminarJugador(this);
+                System.out.println("El jugador " + getNombreCamiseta() + " ha sido eliminado de su equipo actual");
+            }
+            nuevoEquipo.agregarJugador(this);
+            traspaso = Traspaso.SINSOLICITAR;
+            System.out.println("El jugador " + nombreCamiseta + " se movio al  " + nuevoEquipo.getNombreEquipo());
+        }
     }
 
     /**

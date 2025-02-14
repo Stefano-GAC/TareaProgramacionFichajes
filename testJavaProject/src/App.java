@@ -122,24 +122,39 @@ public class App {
                 /**
                  * Metodos para realizar el Traspaso
                  */
-                System.out.println("Traspaso de jugador con entrenador y presidente del mismo equipo: ");
+                System.out.println("TRASPASO 1: jugador con entrenador y presidente del mismo equipo: \n");
+
                 jugador3.jugadorTraspaso();
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador1.getNombreEntrenador());
                 entrenador1.entrenadorDecision(jugador3);
+                System.out.println("La solicitud ha pasado al presidente:" + presidente1.getNombre());
                 presidente1.presidenteDecision(jugador3);
+                jugador3.moverJugador(equipo2);
+
                 System.out.println("-------------------------");
 
-                System.out.println("Traspaso de jugador con entrenador de diferente equipo rechazado: ");
+                System.out.println("TRASPASO 2: jugador con entrenador de diferente equipo rechazado: \n");
+
                 jugador5.jugadorTraspaso();
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombreEntrenador());
                 entrenador3.entrenadorDecision(jugador5);
+                System.out.println("La solicitud ha pasado al presidente:" + presidente3.getNombre());
                 presidente3.presidenteDecision(jugador5);
+                jugador5.moverJugador(equipo3);
+
                 System.out.println("-------------------------");
 
                 System.out.println(
-                                "Traspaso de jugador con entrenador del mismo equipo , pero con presidente de equipo diferente: ");
+                                "TRASPASO 3: jugador con entrenador del mismo equipo , pero con presidente de equipo diferente: \n");
                 jugador8.jugadorTraspaso();
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombreEntrenador());
                 entrenador3.entrenadorDecision(jugador8);
+                System.out.println("La solicitud ha pasado al presidente:" + presidente1.getNombre());
                 presidente1.presidenteDecision(jugador8);
+                jugador8.moverJugador(equipo1);
+
                 System.out.println("-------------------------");
 
         }
+
 }
