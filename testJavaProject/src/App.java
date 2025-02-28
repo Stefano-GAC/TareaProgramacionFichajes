@@ -1,5 +1,7 @@
-import java.sql.Date;
+
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Calendar;
 
 import Entrenador.Entrenador;
 import Entrenador.Formacion;
@@ -8,6 +10,7 @@ import Jugador.Jugador;
 import Jugador.Posicion;
 import Jugador.Traspaso;
 import Presidente.Presidente;
+import Trabajador.Trabajador;
 
 public class App {
         public static void main(String[] args) {
@@ -36,24 +39,32 @@ public class App {
                 /**
                  * Creacion de objetos de la clase Jugador
                  */
-                Jugador jugador1 = new Jugador("Luis Suárez", new Date(1987, 1, 24), "Uruguay", Posicion.Delantero, 9,
+                Jugador jugador1 = new Jugador("Luis Suárez", new Date(1994, 1, 12), "Uruguay", "Suarez",
+                                Posicion.Delantero, 9,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", Posicion.Defensa, 8,
+                Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", "Piqué",
+                                Posicion.Defensa,
+                                8,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador3 = new Jugador("Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", Posicion.Portero,
+                Jugador jugador3 = new Jugador("Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", "Courtois",
+                                Posicion.Portero,
                                 1, Traspaso.SINSOLICITAR);
                 Jugador jugador4 = new Jugador("Leonel Messi", new Date(1984, 5, 26), "Argentina",
-                                Posicion.Medio_Campista, 10, Traspaso.SINSOLICITAR);
-                Jugador jugador5 = new Jugador("Stefano Alderete", new Date(2000, 8, 21), "Peru", Posicion.Aguatero, 0,
+                                "Messi", Posicion.Medio_Campista, 10, Traspaso.SINSOLICITAR);
+                Jugador jugador5 = new Jugador("Stefano Alderete", new Date(2000, 8, 21), "Peru", "Gonzalo",
+                                Posicion.Aguatero, 0,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador6 = new Jugador("Vini Jr", new Date(2000, 6, 21), "Brasil", Posicion.Delantero, 9,
+                Jugador jugador6 = new Jugador("Vinicious Junior", new Date(2000, 6, 21), "Brasil", "Vini Jr",
+                                Posicion.Delantero, 9,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador7 = new Jugador("Van Dijk", new Date(1998, 6, 11), "Paises Bajos", Posicion.Defensa,
+                Jugador jugador7 = new Jugador("Van Dijk", new Date(1998, 6, 11), "Paises Bajos", "Virgil",
+                                Posicion.Defensa,
                                 6666, Traspaso.SINSOLICITAR);
-                Jugador jugador8 = new Jugador("Lamine Yamal", new Date(2006, 9, 25), "España", Posicion.Delantero, 11,
+                Jugador jugador8 = new Jugador("Lamine Yamal", new Date(2006, 9, 25), "España", "Yamal",
+                                Posicion.Delantero, 11,
                                 Traspaso.SINSOLICITAR);
                 Jugador jugador9 = new Jugador("Andres Iniesta", new Date(1889, 7, 1), "España",
-                                Posicion.Medio_Campista, 8, Traspaso.SINSOLICITAR);
+                                "Iniesta", Posicion.Medio_Campista, 8, Traspaso.SINSOLICITAR);
 
                 /**
                  * Creacion de la lista jugadores equipo 1
@@ -102,6 +113,7 @@ public class App {
                 /**
                  * Prueba de los toString
                  */
+                System.out.println("PRÁCTICA 5");
                 System.out.println("Los Jugadores del Barcelona son:");
                 int contador = 1;
                 for (Jugador jugador : jugadores1) {
@@ -160,6 +172,11 @@ public class App {
                 System.out.println("Total equipos creados: " + Equipo.getContador());
                 System.out.println("Total presidentes creados: " + Presidente.getContador());
 
+                System.out.println("-------------------------");
+                System.out.println("PRÁCTICA 6");
+
+                System.out.println(jugador1.comparaNacionalidad(jugador2));
+                System.out.println(jugador8.comparaNacionalidad(jugador9));
 
         }
 
