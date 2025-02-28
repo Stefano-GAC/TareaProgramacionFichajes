@@ -1,36 +1,34 @@
 package Jugador;
 
-import java.sql.Date;
+import java.util.Date;
 
 import Equipo.Equipo;
 import Jugador.Traspaso;
+import Trabajador.Trabajador;
 
-public class Jugador {
-    private static int contador = 0; 
+public class Jugador extends Trabajador {
+    private static int contador = 0;
 
     private String nombreCamiseta;
-    private Date fechaNacimiento;
-    private String paisOrigen;
     private Posicion posicionJugador;
     private int dorsal;
     private Traspaso traspaso;
     private Equipo equipo;
 
     /**
-     * Constructor del nuevo jugador
      * 
-     * @param nombreCamiseta
+     * @param nombre
      * @param fechaNacimiento
      * @param paisOrigen
+     * @param nombreCamiseta
      * @param posicionJugador
      * @param dorsal
      * @param traspaso
      */
-    public Jugador(String nombreCamiseta, Date fechaNacimiento, String paisOrigen, Posicion posicionJugador,
-            int dorsal, Traspaso traspaso) {
+    public Jugador(String nombre, Date fechaNacimiento, String paisOrigen, String nombreCamiseta,
+            Posicion posicionJugador, int dorsal, Traspaso traspaso) {
+        super(nombre, fechaNacimiento, paisOrigen);
         this.nombreCamiseta = nombreCamiseta;
-        this.fechaNacimiento = fechaNacimiento;
-        this.paisOrigen = paisOrigen;
         this.posicionJugador = posicionJugador;
         this.dorsal = dorsal;
         this.traspaso = Traspaso.SINSOLICITAR;
@@ -169,7 +167,7 @@ public class Jugador {
      * 
      * @return el contador de los jugadores
      */
-    public static int getContador(){
+    public static int getContador() {
         return contador;
     }
 
@@ -212,9 +210,18 @@ public class Jugador {
      */
     @Override
     public String toString() {
-        return "Jugador [nombreCamiseta= " + nombreCamiseta + ", fechaNacimiento= " + fechaNacimiento
-                + ", paisOrigen= " + paisOrigen + ", posicionJugador= " + posicionJugador + ", dorsal= " + dorsal
-                + ", traspasoJugador= " + traspaso + "]";
+        return "Jugador [nombre=" + nombre + ", nombreCamiseta= " + nombreCamiseta + ",fechaNacimiento="
+                + fechaNacimiento + ", paisOrigen="
+                + paisOrigen + ", posicionJugador=" + posicionJugador + ", dorsal="
+                + dorsal + ", traspaso=" + traspaso + ", equipo=" + equipo + "]";
+    }
+
+    /**
+     * Metodo que muestra la información del trabajador
+     */
+    @Override
+    public void trabajadorInfo() {
+        System.out.println("Nombre: " + nombre + ", Tipo: Jugador");
     }
 
 }
