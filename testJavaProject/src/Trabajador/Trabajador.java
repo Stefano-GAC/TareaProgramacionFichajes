@@ -1,22 +1,35 @@
 package Trabajador;
-
 import java.util.Date;
 
 public abstract class Trabajador {
     protected String nombre;
     protected Date fechaNacimiento;
     protected String paisOrigen;
+    protected TipoTrabajador tipoTrabajador;
 
     /**
      * 
-     * @param nombre          Nombre del trabajador
-     * @param fechaNacimiento fecha de nacimiento del trabajador
-     * @param paisOrigen      Pais origen del trabajador
-     */
-    public Trabajador(String nombre, Date fechaNacimiento, String paisOrigen) {
+     * Constructor del Jugador
+     * @param tipoTrabajador
+     * @param nombre
+     * @param fechaNacimiento
+     * @param paisOrigen
+    */
+    public Trabajador(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen) {
+        this.tipoTrabajador = tipoTrabajador;
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.paisOrigen = paisOrigen;
+    }
+
+    /**
+     * Constructor del Entrenador y Presidente
+     * @param tipoTrabajador
+     * @param nombre
+    */
+    public Trabajador(TipoTrabajador tipoTrabajador, String nombre){
+        this.tipoTrabajador = tipoTrabajador;
+        this.nombre= nombre;
     }
 
     /**
@@ -71,14 +84,29 @@ public abstract class Trabajador {
     }
 
     /**
+     * 
+     * @return Retorna el tipo de Trabajador
+    */
+    public TipoTrabajador getTipoTrabajador(){
+        return tipoTrabajador;
+    }
+
+    /**
+     * 
+     * @param tipoTrabajador Modifica o pone el tipo de Trabajador
+    */
+    public void setTipoTrabajador(TipoTrabajador tipoTrabajador){
+        this.tipoTrabajador= tipoTrabajador;
+    }
+
+    /**
      * Método abstracto a implementar en las subclases
      */
-    public abstract void trabajadorInfo();
-
+    public abstract void mostrarInfo();
     /**
      * Método para comparar si dos trabajadores tienen la misma nacionalidad
      */
-    public String comparaNacionalidad(Trabajador jugadorCompara) {
+    public String mismaNacionalidad(Trabajador jugadorCompara) {
         if (this.paisOrigen.equalsIgnoreCase(jugadorCompara.paisOrigen)) {
             return "Jugador " + this.getNombre() + " tiene la misma nacionalidad que " + jugadorCompara.getNombre();
         } else {

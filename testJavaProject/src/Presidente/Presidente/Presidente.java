@@ -1,14 +1,17 @@
 package Presidente;
 
+import Entrenador.Entrenador;
 import Equipo.Equipo;
 import Jugador.Traspaso;
 import Jugador.Jugador;
+import Trabajador.TipoTrabajador;
+import Trabajador.Trabajador;
+import Trabajador.TipoTrabajador;
 
-public class Presidente {
+public class Presidente extends Trabajador{
     private static int contador = 0;
 
     private String dni;
-    private String nombre;
     private Equipo equipo;
 
     /**
@@ -17,9 +20,9 @@ public class Presidente {
      * @param nombre Nombre del presidente
      * @param equipo Equipo al que pertenece el presidente
      */
-    public Presidente(String dni, String nombre, Equipo equipo) {
+    public Presidente(TipoTrabajador tipoTrabajador, String dni, String nombre, Equipo equipo) {
+        super(tipoTrabajador, nombre);
         this.dni = dni;
-        this.nombre = nombre;
         this.equipo = equipo;
         contador++;
     }
@@ -39,23 +42,6 @@ public class Presidente {
      */
     public void setDni(String dni) {
         dni = dni;
-    }
-
-    /**
-     * 
-     * @return El nombre del presidente
-     */
-    public String getNombre() {
-        return nombre;
-    }
-
-    /**
-     * Pone o modifica el nombre del presidente
-     * 
-     * @param nombre
-     */
-    public void setNombre(String nombre) {
-        nombre = nombre;
     }
 
     /**
@@ -107,5 +93,12 @@ public class Presidente {
     @Override
     public String toString() {
         return "Presidente [Dni= " + dni + "Nombre= " + nombre + "Equipo= " + equipo + "]";
+    }
+    /**
+     * Metodo que muestra la información del trabajador
+     */
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre + ", Tipo: " + tipoTrabajador);
     }
 }
