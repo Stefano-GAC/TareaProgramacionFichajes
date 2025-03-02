@@ -3,11 +3,13 @@ package Entrenador;
 import Jugador.Jugador;
 import Equipo.Equipo;
 import Jugador.Traspaso;
+import Presidente.Presidente;
+import Trabajador.TipoTrabajador;
+import Trabajador.Trabajador;
 
-public class Entrenador {
+public class Entrenador extends Trabajador {
     private static int contador = 0;
 
-    private String nombreEntrenador;
     private Formacion formacionPreferida;
     private Traspaso traspasoJugador;
     private Equipo equipo;
@@ -15,32 +17,15 @@ public class Entrenador {
     /**
      * Constructor de Entrnador
      * 
-     * @param nombreEntrenador
+     * @param nombre
      * @param formacionPreferida
      * @param equipo
      */
-    public Entrenador(String nombreEntrenador, Formacion formacionPreferida, Equipo equipo) {
-        this.nombreEntrenador = nombreEntrenador;
+    public Entrenador(TipoTrabajador tipoTrabajador, String nombre, Formacion formacionPreferida, Equipo equipo) {
+        super(tipoTrabajador, nombre);
         this.formacionPreferida = formacionPreferida;
         this.equipo = equipo;
         contador++;
-    }
-
-    /**
-     * 
-     * @return El nombre del entrenador
-     */
-    public String getNombreEntrenador() {
-        return nombreEntrenador;
-    }
-
-    /**
-     * Pone o modifica el nombre del entrenador
-     * 
-     * @param nombreEntrenador
-     */
-    public void setNombreEntrenador(String nombreEntrenador) {
-        this.nombreEntrenador = nombreEntrenador;
     }
 
     /**
@@ -52,14 +37,6 @@ public class Entrenador {
     }
 
     /**
-     * 
-     * @return contadir de los entrenadores
-     */
-    public static int getContador() {
-        return contador;
-    }
-
-    /**
      * Pone o modifica la formacion de un entrenador para un equipo
      * 
      * @param formacionPreferida
@@ -68,16 +45,24 @@ public class Entrenador {
         this.formacionPreferida = formacionPreferida;
     }
 
+    /**
+     * 
+     * @return contadir de los entrenadores
+     */
+    public static int getContador() {
+        return contador;
+    }
+
     public void entrenadorDecision(Jugador jugador) {
         if (jugador.getTraspaso() == Traspaso.SOLICITADO) {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOENTRENADOR);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del aprobado de " + nombreEntrenador);
+                        + " despues del aprobado de " + nombre);
             } else {
                 jugador.setTraspaso(Traspaso.RECHAZADOENTRENADOR);
                 System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del rechazo de " + nombreEntrenador);
+                        + " despues del rechazo de " + nombre);
 
             }
 
@@ -89,7 +74,14 @@ public class Entrenador {
      */
     @Override
     public String toString() {
-        return "Entrenador [Nombre= " + nombreEntrenador + "Formación= " + formacionPreferida + "Equipo = "
+        return "Entrenador [Nombre= " + nombre + "Formación= " + formacionPreferida + "Equipo = "
                 + equipo + "]";
+    }
+    /**
+     * Metodo que muestra la información del trabajador
+     */
+    @Override
+    public void mostrarInfo() {
+        System.out.println("Nombre: " + nombre + ", Tipo: " + tipoTrabajador);
     }
 }

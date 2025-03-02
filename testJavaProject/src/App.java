@@ -11,6 +11,7 @@ import Jugador.Posicion;
 import Jugador.Traspaso;
 import Presidente.Presidente;
 import Trabajador.Trabajador;
+import Trabajador.TipoTrabajador;
 
 public class App {
         public static void main(String[] args) {
@@ -25,45 +26,45 @@ public class App {
                 /**
                  * Creacion de objetos de la clase Presidente
                  */
-                Presidente presidente1 = new Presidente("123456789A", "Carlos Martinez", equipo1);
-                Presidente presidente2 = new Presidente("123456789B", "Camila Gonzalez", equipo2);
-                Presidente presidente3 = new Presidente("123456789C", "Jose Rpdriguez", equipo3);
+                Presidente presidente1 = new Presidente(TipoTrabajador.Presidente, "123456789A", "Carlos Martinez", equipo1);
+                Presidente presidente2 = new Presidente(TipoTrabajador.Presidente, "123456789B", "Camila Gonzalez", equipo2);
+                Presidente presidente3 = new Presidente(TipoTrabajador.Presidente, "123456789C", "Jose Rpdriguez", equipo3);
 
                 /**
                  * Creacion de objetos de la clase Entrenador
                  */
-                Entrenador entrenador1 = new Entrenador("Carlo Ancelotti", Formacion.Formacion343, equipo1);
-                Entrenador entrenador2 = new Entrenador("Hansi Flick", Formacion.Formacion4141, equipo2);
-                Entrenador entrenador3 = new Entrenador("Diego Simeone", Formacion.Formacion433, equipo3);
+                Entrenador entrenador1 = new Entrenador(TipoTrabajador.Entrenador, "Carlo Ancelotti", Formacion.Formacion343, equipo1);
+                Entrenador entrenador2 = new Entrenador(TipoTrabajador.Entrenador, "Hansi Flick", Formacion.Formacion4141, equipo2);
+                Entrenador entrenador3 = new Entrenador(TipoTrabajador.Entrenador, "Diego Simeone", Formacion.Formacion433, equipo3);
 
                 /**
                  * Creacion de objetos de la clase Jugador
                  */
-                Jugador jugador1 = new Jugador("Luis Suárez", new Date(1994, 1, 12), "Uruguay", "Suarez",
+                Jugador jugador1 = new Jugador(TipoTrabajador.Jugador, "Luis Suárez", new Date(1994, 1, 12), "Uruguay", "Suarez",
                                 Posicion.Delantero, 9,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador2 = new Jugador("Gerard Piqué", new Date(1987, 2, 2), "España", "Piqué",
+                Jugador jugador2 = new Jugador(TipoTrabajador.Jugador, "Gerard Piqué", new Date(1987, 2, 2), "España", "Piqué",
                                 Posicion.Defensa,
                                 8,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador3 = new Jugador("Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", "Courtois",
+                Jugador jugador3 = new Jugador(TipoTrabajador.Jugador, "Thibaut Courtois", new Date(1992, 5, 11), "Bélgica", "Courtois",
                                 Posicion.Portero,
                                 1, Traspaso.SINSOLICITAR);
-                Jugador jugador4 = new Jugador("Leonel Messi", new Date(1984, 5, 26), "Argentina",
+                Jugador jugador4 = new Jugador( TipoTrabajador.Jugador, "Leonel Messi", new Date(1984, 5, 26), "Argentina",
                                 "Messi", Posicion.Medio_Campista, 10, Traspaso.SINSOLICITAR);
-                Jugador jugador5 = new Jugador("Stefano Alderete", new Date(2000, 8, 21), "Peru", "Gonzalo",
+                Jugador jugador5 = new Jugador(TipoTrabajador.Jugador, "Stefano Alderete", new Date(2000, 8, 21), "Peru", "Gonzalo",
                                 Posicion.Aguatero, 0,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador6 = new Jugador("Vinicious Junior", new Date(2000, 6, 21), "Brasil", "Vini Jr",
+                Jugador jugador6 = new Jugador(TipoTrabajador.Jugador, "Vinicious Junior", new Date(2000, 6, 21), "Brasil", "Vini Jr",
                                 Posicion.Delantero, 9,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador7 = new Jugador("Van Dijk", new Date(1998, 6, 11), "Paises Bajos", "Virgil",
+                Jugador jugador7 = new Jugador(TipoTrabajador.Jugador, "Van Dijk", new Date(1998, 6, 11), "Paises Bajos", "Virgil",
                                 Posicion.Defensa,
                                 6666, Traspaso.SINSOLICITAR);
-                Jugador jugador8 = new Jugador("Lamine Yamal", new Date(2006, 9, 25), "España", "Yamal",
+                Jugador jugador8 = new Jugador(TipoTrabajador.Jugador, "Lamine Yamal", new Date(2006, 9, 25), "España", "Yamal",
                                 Posicion.Delantero, 11,
                                 Traspaso.SINSOLICITAR);
-                Jugador jugador9 = new Jugador("Andres Iniesta", new Date(1889, 7, 1), "España",
+                Jugador jugador9 = new Jugador(TipoTrabajador.Jugador, "Andres Iniesta", new Date(1889, 7, 1), "España",
                                 "Iniesta", Posicion.Medio_Campista, 8, Traspaso.SINSOLICITAR);
 
                 /**
@@ -137,7 +138,7 @@ public class App {
                 System.out.println("TRASPASO 1: jugador con entrenador y presidente del mismo equipo: \n");
 
                 jugador3.jugadorTraspaso();
-                System.out.println("La solicitud ha pasado al entrenador:" + entrenador1.getNombreEntrenador());
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador1.getNombre());
                 entrenador1.entrenadorDecision(jugador3);
                 System.out.println("La solicitud ha pasado al presidente:" + presidente1.getNombre());
                 presidente1.presidenteDecision(jugador3);
@@ -148,7 +149,7 @@ public class App {
                 System.out.println("TRASPASO 2: jugador con entrenador de diferente equipo rechazado: \n");
 
                 jugador5.jugadorTraspaso();
-                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombreEntrenador());
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombre());
                 entrenador3.entrenadorDecision(jugador5);
                 System.out.println("La solicitud ha pasado al presidente:" + presidente3.getNombre());
                 presidente3.presidenteDecision(jugador5);
@@ -159,7 +160,7 @@ public class App {
                 System.out.println(
                                 "TRASPASO 3: jugador con entrenador del mismo equipo , pero con presidente de equipo diferente: \n");
                 jugador8.jugadorTraspaso();
-                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombreEntrenador());
+                System.out.println("La solicitud ha pasado al entrenador:" + entrenador3.getNombre());
                 entrenador3.entrenadorDecision(jugador8);
                 System.out.println("La solicitud ha pasado al presidente:" + presidente1.getNombre());
                 presidente1.presidenteDecision(jugador8);
@@ -174,10 +175,9 @@ public class App {
 
                 System.out.println("-------------------------");
                 System.out.println("PRÁCTICA 6");
-
-                System.out.println(jugador1.comparaNacionalidad(jugador2));
-                System.out.println(jugador8.comparaNacionalidad(jugador9));
+                System.out.println(jugador1.mismaNacionalidad(jugador2));
+                System.out.println(jugador8.mismaNacionalidad(jugador9));
 
         }
-
+        
 }
