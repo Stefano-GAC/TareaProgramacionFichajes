@@ -26,22 +26,22 @@ public class App {
                 /**
                  * Creacion de objetos de la clase Presidente
                  */
-                Presidente presidente1 = new Presidente(TipoTrabajador.Presidente, "123456789A", "Carlos Martinez",
-                                equipo1);
-                Presidente presidente2 = new Presidente(TipoTrabajador.Presidente, "123456789B", "Camila Gonzalez",
-                                equipo2);
-                Presidente presidente3 = new Presidente(TipoTrabajador.Presidente, "123456789C", "Jose Rpdriguez",
-                                equipo3);
+                Presidente presidente1 = new Presidente(TipoTrabajador.Presidente, "123456789A", new Date(3, 8, 1995), "Carlos Martinez",
+                                                equipo1, "A9875155");
+                Presidente presidente2 = new Presidente(TipoTrabajador.Presidente, "123456789B", new Date(2,1,1986), "Camila Gonzalez",
+                                                equipo2, "B6168651");
+                Presidente presidente3 = new Presidente(TipoTrabajador.Presidente, "123456789C", new Date(12, 6,1993), "Jose Rpdriguez",
+                                                equipo3, "C8961456");
 
                 /**
                  * Creacion de objetos de la clase Entrenador
                  */
                 Entrenador entrenador1 = new Entrenador(TipoTrabajador.Entrenador, "Carlo Ancelotti",
-                                Formacion.Formacion343, equipo1);
+                                new Date(20, 15, 1980), "España", Formacion.Formacion343, equipo1);
                 Entrenador entrenador2 = new Entrenador(TipoTrabajador.Entrenador, "Hansi Flick",
-                                Formacion.Formacion4141, equipo2);
+                                new Date(9, 10, 1990), "Paises bajos", Formacion.Formacion4141, equipo2);
                 Entrenador entrenador3 = new Entrenador(TipoTrabajador.Entrenador, "Diego Simeone",
-                                Formacion.Formacion433, equipo3);
+                                new Date(15, 02, 1985), "España", Formacion.Formacion433, equipo3);
 
                 /**
                  * Creacion de objetos de la clase Jugador
@@ -192,6 +192,9 @@ public class App {
                 System.out.println(jugador1.mismaNacionalidad(jugador2));
                 System.out.println(jugador8.mismaNacionalidad(jugador9));
 
+                System.out.println("-------------------------");
+                System.out.println("Probando contadores de Ttrabajador");
+                System.out.println("El total de trabajadores es: " + Trabajador.getContadorTrabajadores());
         }
 
 }

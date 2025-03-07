@@ -8,6 +8,7 @@ import Jugador.Jugador;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
 import Trabajador.TipoTrabajador;
+import java.util.Date;
 
 public class Presidente extends Trabajador implements GestorTraspaso {
     private static int contador = 0;
@@ -21,8 +22,8 @@ public class Presidente extends Trabajador implements GestorTraspaso {
      * @param nombre Nombre del presidente
      * @param equipo Equipo al que pertenece el presidente
      */
-    public Presidente(TipoTrabajador tipoTrabajador, String dni, String nombre, Equipo equipo) {
-        super(tipoTrabajador, nombre);
+    public Presidente(TipoTrabajador tipoTrabajador,String nombre, Date fechaNacimiento, String paisOrigen, Equipo equi, String dnipo) {
+        super(tipoTrabajador, nombre, fechaNacimiento, paisOrigen);
         this.dni = dni;
         this.equipo = equipo;
         contador++;

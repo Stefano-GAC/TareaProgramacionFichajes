@@ -2,6 +2,8 @@ package Trabajador;
 import java.util.Date;
 
 public abstract class Trabajador {
+    private static int contadorTrabajadores = 0;
+
     protected String nombre;
     protected Date fechaNacimiento;
     protected String paisOrigen;
@@ -20,6 +22,7 @@ public abstract class Trabajador {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
         this.paisOrigen = paisOrigen;
+        contadorTrabajadores++;
     }
 
     /**
@@ -97,6 +100,14 @@ public abstract class Trabajador {
     */
     public void setTipoTrabajador(TipoTrabajador tipoTrabajador){
         this.tipoTrabajador= tipoTrabajador;
+    }
+
+    /**
+     * 
+     * @return Retorna el contador de los trabajadores
+     */
+    public static int getContadorTrabajadores() {
+        return contadorTrabajadores;
     }
 
     /**
