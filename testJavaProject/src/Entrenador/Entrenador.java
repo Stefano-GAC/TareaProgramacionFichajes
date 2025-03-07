@@ -2,12 +2,13 @@ package Entrenador;
 
 import Jugador.Jugador;
 import Equipo.Equipo;
+import GestorTraspaso.GestorTraspaso;
 import Jugador.Traspaso;
 import Presidente.Presidente;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
 
-public class Entrenador extends Trabajador {
+public class Entrenador extends Trabajador implements GestorTraspaso {
     private static int contador = 0;
 
     private Formacion formacionPreferida;
@@ -53,20 +54,22 @@ public class Entrenador extends Trabajador {
         return contador;
     }
 
-    public void entrenadorDecision(Jugador jugador) {
+    @Override
+    public void aprobarTraspaso(Jugador jugador) {
         if (jugador.getTraspaso() == Traspaso.SOLICITADO) {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOENTRENADOR);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del aprobado de " + nombre);
+                System.out.println("El entrenador " + nombre + " ha aprobado el traspaso de " + jugador.getNombre());
             } else {
-                jugador.setTraspaso(Traspaso.RECHAZADOENTRENADOR);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del rechazo de " + nombre);
-
+                rechazarTraspaso(jugador);
             }
-
         }
+    }
+
+    @Override
+    public void rechazarTraspaso(Jugador jugador) {
+        jugador.setTraspaso(Traspaso.RECHAZADOENTRENADOR);
+        System.out.println("El entrenador " + nombre + " ha rechazado el traspaso de " + jugador.getNombre());
     }
 
     /**
@@ -77,6 +80,7 @@ public class Entrenador extends Trabajador {
         return "Entrenador [Nombre= " + nombre + "Formación= " + formacionPreferida + "Equipo = "
                 + equipo + "]";
     }
+
     /**
      * Metodo que muestra la información del trabajador
      */

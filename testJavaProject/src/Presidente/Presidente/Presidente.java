@@ -2,13 +2,14 @@ package Presidente;
 
 import Entrenador.Entrenador;
 import Equipo.Equipo;
+import GestorTraspaso.GestorTraspaso;
 import Jugador.Traspaso;
 import Jugador.Jugador;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
 import Trabajador.TipoTrabajador;
 
-public class Presidente extends Trabajador{
+public class Presidente extends Trabajador implements GestorTraspaso {
     private static int contador = 0;
 
     private String dni;
@@ -65,26 +66,32 @@ public class Presidente extends Trabajador{
      * 
      * @return el contador de los presidentes
      */
-    public static int getContador(){
+    public static int getContador() {
         return contador;
     }
 
-    public void presidenteDecision(Jugador jugador) {
+    /**
+     * Método para aprobar traspaso específicamente por el presidente
+     */
+    @Override
+    public void aprobarTraspaso(Jugador jugador) {
         if (jugador.getTraspaso() == Traspaso.APROBADOENTRENADOR) {
             if (jugador.getEquipo().equals(this.equipo)) {
                 jugador.setTraspaso(Traspaso.APROBADOPRESIDENTE);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + " despues del aprobado del presidente " + nombre);
+                System.out.println("El presidente " + nombre + " ha aprobado el traspaso de " + jugador.getNombre());
             } else {
-                jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
-                System.out.println("El nuevo estado del traspaso es: " + jugador.getTraspaso()
-                        + "despues de la negativa de " + nombre);
+                rechazarTraspaso(jugador);
             }
         }
-        if ((jugador.getTraspaso() == Traspaso.APROBADOPRESIDENTE)
-                || (jugador.getTraspaso() == Traspaso.RECHAZADOPRESIDENTE)
-                || (jugador.getTraspaso() == Traspaso.RECHAZADOENTRENADOR)) {
-        }
+    }
+
+    /**
+     * Método para rechazar traspaso específicamente por el presidente
+     */
+    @Override
+    public void rechazarTraspaso(Jugador jugador) {
+        jugador.setTraspaso(Traspaso.RECHAZADOPRESIDENTE);
+        System.out.println("El presidente " + nombre + " ha rechazado el traspaso de " + jugador.getNombre());
     }
 
     /**
@@ -94,6 +101,7 @@ public class Presidente extends Trabajador{
     public String toString() {
         return "Presidente [Dni= " + dni + "Nombre= " + nombre + "Equipo= " + equipo + "]";
     }
+
     /**
      * Metodo que muestra la información del trabajador
      */
