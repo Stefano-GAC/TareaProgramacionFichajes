@@ -4,7 +4,6 @@ import Jugador.Jugador;
 import Equipo.Equipo;
 import GestorTraspaso.GestorTraspaso;
 import Jugador.Traspaso;
-import Presidente.Presidente;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
 import java.util.Date;
@@ -13,17 +12,18 @@ public class Entrenador extends Trabajador implements GestorTraspaso {
     private static int contador = 0;
 
     private Formacion formacionPreferida;
-    private Traspaso traspasoJugador;
     private Equipo equipo;
 
     /**
-     * Constructor de Entrnador
-     * 
+     * @param tipoTrabajador
      * @param nombre
+     * @param fechaNacimiento
+     * @param paisOrigen
      * @param formacionPreferida
      * @param equipo
      */
-    public Entrenador(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen, Formacion formacionPreferida, Equipo equipo) {
+    public Entrenador(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen,
+            Formacion formacionPreferida, Equipo equipo) {
         super(tipoTrabajador, nombre, fechaNacimiento, paisOrigen);
         this.formacionPreferida = formacionPreferida;
         this.equipo = equipo;
@@ -49,7 +49,7 @@ public class Entrenador extends Trabajador implements GestorTraspaso {
 
     /**
      * 
-     * @return contadir de los entrenadores
+     * @return contador de los entrenadores
      */
     public static int getContador() {
         return contador;

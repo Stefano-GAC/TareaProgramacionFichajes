@@ -2,13 +2,9 @@ package Jugador;
 
 import java.util.Date;
 
-import Entrenador.Entrenador;
 import Equipo.Equipo;
-import Jugador.Traspaso;
-import Presidente.Presidente;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
-import Trabajador.TipoTrabajador;
 
 public class Jugador extends Trabajador {
     private static int contador = 0;
@@ -20,8 +16,18 @@ public class Jugador extends Trabajador {
     private Equipo equipo;
 
     /**
+     * 
+     * @param tipoTrabajador
+     * @param nombre
+     * @param fechaNacimiento
+     * @param paisOrigen
+     * @param nombreCamiseta
+     * @param posicionJugador
+     * @param dorsal
+     * @param traspaso
      */
-    public Jugador(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen, String nombreCamiseta, Posicion posicionJugador, int dorsal, Traspaso traspaso) {
+    public Jugador(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen,
+            String nombreCamiseta, Posicion posicionJugador, int dorsal, Traspaso traspaso) {
         super(tipoTrabajador, nombre, fechaNacimiento, paisOrigen);
         this.nombreCamiseta = nombreCamiseta;
         this.posicionJugador = posicionJugador;
@@ -180,8 +186,6 @@ public class Jugador extends Trabajador {
     /**
      * Metodo que muestra la información del trabajador
      */
-    
-
     @Override
     public void mostrarInfo() {
         System.out.println("Nombre: " + nombre + ", Tipo: " + tipoTrabajador);

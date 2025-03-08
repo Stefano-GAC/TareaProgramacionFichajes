@@ -2,8 +2,6 @@ package Equipo;
 
 import java.util.ArrayList;
 
-import Presidente.Presidente;
-import Entrenador.Entrenador;
 import Jugador.Jugador;
 
 public class Equipo {
@@ -12,8 +10,6 @@ public class Equipo {
     private String nombreEquipo;
     private String abrevEquipo;
     private ArrayList<Jugador> jugadores;
-    private Entrenador entrenador;
-    private Presidente presidente;
 
     /**
      * Relacion lista de Jugadores en Equipos
@@ -120,7 +116,7 @@ public class Equipo {
      * 
      * @return contador de los equipos
      */
-    public static int getContador(){
+    public static int getContador() {
         return contador;
     }
 

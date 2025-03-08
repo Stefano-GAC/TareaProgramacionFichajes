@@ -1,13 +1,11 @@
 package Presidente;
 
-import Entrenador.Entrenador;
 import Equipo.Equipo;
 import GestorTraspaso.GestorTraspaso;
 import Jugador.Traspaso;
 import Jugador.Jugador;
 import Trabajador.TipoTrabajador;
 import Trabajador.Trabajador;
-import Trabajador.TipoTrabajador;
 import java.util.Date;
 
 public class Presidente extends Trabajador implements GestorTraspaso {
@@ -22,7 +20,8 @@ public class Presidente extends Trabajador implements GestorTraspaso {
      * @param nombre Nombre del presidente
      * @param equipo Equipo al que pertenece el presidente
      */
-    public Presidente(TipoTrabajador tipoTrabajador,String nombre, Date fechaNacimiento, String paisOrigen, Equipo equi, String dnipo) {
+    public Presidente(TipoTrabajador tipoTrabajador, String nombre, Date fechaNacimiento, String paisOrigen,
+            Equipo equipo, String dni) {
         super(tipoTrabajador, nombre, fechaNacimiento, paisOrigen);
         this.dni = dni;
         this.equipo = equipo;
@@ -43,7 +42,7 @@ public class Presidente extends Trabajador implements GestorTraspaso {
      * @param dni
      */
     public void setDni(String dni) {
-        dni = dni;
+        this.dni = dni;
     }
 
     /**
